@@ -1,0 +1,36 @@
+# Uncomment the next line to define a global platform for your project
+ platform :ios, '11.0'
+
+target 'Medline-DigitalSkinHealth' do
+  use_frameworks!
+  #Pods for Medline-DigitalSkinHealth
+  pod 'EncryptedCoreData', :git => 'https://github.com/project-imas/encrypted-core-data.git'
+  pod 'Alamofire', '~> 5.0'
+  pod 'PromiseKit'
+  pod 'KeychainSwift' #Pod for keychain access
+  pod 'NVActivityIndicatorView' #Pod for Activity indicator
+  pod 'Firebase/InAppMessaging' #Pod for Firebase
+  pod 'Firebase/Crashlytics', '~> 7.6.0' #Pod for Firebase
+  pod 'Firebase/Analytics' #Pod for Firebase
+  pod 'IQKeyboardManagerSwift' #Pod for Keyboard manager
+  post_install do |installer|
+      installer.pods_project.targets.each do |target|
+          target.build_configurations.each do |config|
+              config.build_settings['GCC_WARN_INHIBIT_ALL_WARNINGS'] = "YES"
+              config.build_settings['SWIFT_SUPPRESS_WARNINGS'] = "YES"
+              config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '11.0'
+              # Remove warnings and set base version as 11.0
+          end
+      end
+  end
+  
+  target 'Medline-DigitalSkinHealthTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'Medline-DigitalSkinHealthUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+end

@@ -1,0 +1,79 @@
+//
+//  Localizable.strings
+//  Medline-DigitalSkinHealth
+//
+//  Copyright © 2021 Photon. All rights reserved.
+//
+
+"SUCCESS_TITLE" = "Success";
+"OK" = "OK";
+"TRY_AGAIN" = "Try Again";
+"ERR_CONNECTION_TITLE" = "No Internet Connection";
+"ERR_CONNECTION" = "Please check your internet connection and try again";
+"SERVICE_UNAVAILABLE_TITLE" = "Internal Server Error";
+"SERVICE_UNAVAILABLE_MSG"  = "Sorry !!! An internal server error occured.";
+"BAD_API_REQUEST" = "Bad Request";
+"FIRST_NAME" = "First Name";
+"LAST_NAME" = "Last Name";
+"EMAIL" = "Email";
+"EMAIL_IS_VALID" = "You have entered a valid email address";
+"CONFIRM_PASSWORD" = "Confirm Password";
+
+//TextField Placeholder
+"PLACEHOLDER_FIRSTNAME" = "First Name *";
+"PLACEHOLDER_LASTNAME" = "Last Name *";
+"PLACEHOLDER_USERNAME" = "User Name *";
+"PLACEHOLDER_EMAIL" = "Email *";
+"PLACEHOLDER_REGISTERED_EMAIL" = "Email *";
+"PLACEHOLDER_CUSTOMER_NUMBER" = "Customer Number *";
+"PLACEHOLDER_PHONE_NUMBER" = "Phone Number *";
+"PLACEHOLDER_PASSWORD" = "Password *";
+"PLACEHOLDER_NEW_PASSWORD" = "New Password *";
+"PLACEHOLDER_CONFIRM_PASSWORD" = "Confirm Password *";
+"PLACEHOLDER_ZIP_CODE" = "Zip Code *";
+
+"RESET_PASSWORD_LABEL_TEXT" = "Update Password";
+
+"SERVICE_RESPONSE_NULL_MESSAGE" = "Unknown Error Occurred";
+
+//ADA TextField Placeholder
+"ADA_PLACEHOLDER_EMAIL" = "Enter Email";
+"ADA_PLACEHOLDER_PASSWORD" = "Enter Password";
+"ADA_PLACEHOLDER_FIRSTNAME" = "Enter First Name";
+"ADA_PLACEHOLDER_LASTNAME" = "Enter Last Name";
+"ADA_PLACEHOLDER_CUSTOMER_NUMBER" = "Enter Customer Number";
+"ADA_PLACEHOLDER_PHONE_NUMBER" = "Enter Phone Number";
+"ADA_PLACEHOLDER_CONFIRM_PASSWORD" = "Enter Confirm Password";
+"ADA_PLACEHOLDER_NEW_PASSWORD" = "Enter New Password";
+
+
+//Error Message & Screen Text
+"EMAIL_TEXTFIELD_VALIDATION" = "Enter email";
+"PASSWORD_TEXTFIELD_VALIDATION" = "Enter password";
+"PRIVACYPOLICY_AND_TERMCONDITION" = "By signing up or creating an account you agree to the Privacy Policy and \nTerms & Conditions";
+"PRIVACY_POLICY" = "Privacy Policy";
+"TERMS_CONDITION"= "Terms & Conditions";
+"TERMCONDITION_PRIVACYPOLICY_VALIDATION" = "Please enable the Privacy policy and terms & conditions";
+
+"HAVE_ACCOUNT_LOGIN" = "Already have an account? Login";
+"SIGNIN_VIEW_CONTROLLER_SIGNIN_AS_GUEST_USER_LABEL" = "Sign In as Guest User";
+"PASSWORD_RESET_NEW_PASSWORD_TEXTFIELD_VALIDATION" = "Enter New password";
+"PASSWORD_RESET_CONFIRM_PASSWORD_TEXTFIELD_VALIDATION" = "Enter Confirm password";
+"NEW_PASSWORD_NOTEQUAL_TO_CONFIRM_PASSWORD" = "Password does not match";
+"REGISTER_ACCOUNT_FIRST_NAME_VALIDATION" = "Enter First name";
+"REGISTER_ACCOUNT_LAST_NAME_VALIDATION" = "Enter Last name";
+"REGISTER_ACCOUNT_CUSTOMER_NUMBER_VALIDATION" = "Enter Customer number";
+"REGISTER_ACCOUNT_PHONENUMBER_VALIDATION" = "Enter Phone number";
+"REGISTER_ACCOUNT_EMAIL_VALIDATION" = "Enter email";
+"REGISTER_ACCOUNT_PASSWORD_VALIDATION" = "Enter password";
+"REGISTER_ACCOUNT_CONFIRM_PASSWORD_VALIDATION" = "Enter Confirm password";
+"REGISTER_ACCOUNT_NEW_PASSWORD_AND_CONFIRM_PASSWORD_NOT_EQUAL_VALIDATION" = "Password doesn’t match";
+"EMAIL_FORMAT_VALIDATION" = "Incorrect email format";
+"PHONENUMBER_FORMAT_VALIDATION" = "Incorrect Phone number format";
+"PASSWORD_FORMAT_VALIDATION" = "Incorrect password format";
+"SUCCESS_LABEL_TEXT" = "Success!";
+"GREAT_LABEL_TEXT" = "Great!";
+"CONGRATULATIONS_LABEL_TEXT" = "Congratulations!";
+"RESET_PASSWORD_SUCCESS_LABEL_TEXT" = "Your password has been changed";
+"REGISTER_ACCOUNT_SUCCESS_LABEL_TEXT" = "Please check your email for activation link";
+"FORGOT_PASSWORD_SUCCESS" = "Please check your email to reset your password";

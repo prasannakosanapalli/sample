@@ -1,0 +1,1506 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000D7EF125E8D9AC00BBE2A8 /* MedlinePasswordValidationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 000D7EF025E8D9AC00BBE2A8 /* MedlinePasswordValidationView.xib */; };
+		000D7EF625E8DA0100BBE2A8 /* MedlinePasswordValidationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000D7EF525E8DA0100BBE2A8 /* MedlinePasswordValidationView.swift */; };
+		000D7EFB25E91FBA00BBE2A8 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 000D7EFA25E91FBA00BBE2A8 /* Main_iPad.storyboard */; };
+		000D7F0025E91FDB00BBE2A8 /* LaunchScreen_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 000D7EFF25E91FDB00BBE2A8 /* LaunchScreen_iPad.storyboard */; };
+		001E976025F79EC6009C616B /* MedlineLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001E975F25F79EC6009C616B /* MedlineLoginRequest.swift */; };
+		001E976525F79ED5009C616B /* MedlineLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001E976425F79ED5009C616B /* MedlineLoginResponse.swift */; };
+		001E977525F7B199009C616B /* MedlineLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001E977425F7B199009C616B /* MedlineLoginTests.swift */; };
+		004802D925ECF38D00D04161 /* MedlinePasswordValidationView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 004802D825ECF38D00D04161 /* MedlinePasswordValidationView_iPad.xib */; };
+		004F2EFE25D51CEC005CAA8F /* MedlineDeviceInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F2EFD25D51CEC005CAA8F /* MedlineDeviceInformation.swift */; };
+		004F2F0725D51D39005CAA8F /* MedlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F2F0325D51D38005CAA8F /* MedlineTextField.swift */; };
+		004F2F0925D51D39005CAA8F /* MedlineButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F2F0525D51D39005CAA8F /* MedlineButton.swift */; };
+		004F2F0A25D51D39005CAA8F /* MedlineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F2F0625D51D39005CAA8F /* MedlineLabel.swift */; };
+		004F2F3A25D5234A005CAA8F /* MedlineImageSliderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 004F2F3625D5211C005CAA8F /* MedlineImageSliderCollectionViewCell.xib */; };
+		005A3DB625FFAAA000534EB2 /* MedlineHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005A3DB525FFAAA000534EB2 /* MedlineHomeViewController.swift */; };
+		005A3DC125FFB6D700534EB2 /* MedlineHomeScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005A3DC025FFB6D700534EB2 /* MedlineHomeScreenTests.swift */; };
+		00B4B07E25FB6CF000C3E528 /* MedlineLoginResponseData.json in Resources */ = {isa = PBXBuildFile; fileRef = 00B4B07D25FB6CF000C3E528 /* MedlineLoginResponseData.json */; };
+		10013EF325EE262200106C5A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10013EF225EE262200106C5A /* UIView+Extension.swift */; };
+		100DFC5725C5B56A004C7F12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100DFC5625C5B56A004C7F12 /* AppDelegate.swift */; };
+		100DFC5925C5B56A004C7F12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100DFC5825C5B56A004C7F12 /* SceneDelegate.swift */; };
+		100DFC5E25C5B56A004C7F12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 100DFC5C25C5B56A004C7F12 /* Main.storyboard */; };
+		100DFC6125C5B56A004C7F12 /* Medline_DigitalSkinHealth.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 100DFC5F25C5B56A004C7F12 /* Medline_DigitalSkinHealth.xcdatamodeld */; };
+		100DFC6325C5B56B004C7F12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 100DFC6225C5B56B004C7F12 /* Assets.xcassets */; };
+		100DFC6625C5B56B004C7F12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 100DFC6425C5B56B004C7F12 /* LaunchScreen.storyboard */; };
+		100DFC7125C5B56B004C7F12 /* Medline_DigitalSkinHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100DFC7025C5B56B004C7F12 /* Medline_DigitalSkinHealthTests.swift */; };
+		100DFC7C25C5B56B004C7F12 /* Medline_DigitalSkinHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100DFC7B25C5B56B004C7F12 /* Medline_DigitalSkinHealthUITests.swift */; };
+		100DFC9525C5B97D004C7F12 /* MedlineAppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100DFC9325C5B97D004C7F12 /* MedlineAppConstant.swift */; };
+		100DFC9625C5B97D004C7F12 /* MedlineServiceConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100DFC9425C5B97D004C7F12 /* MedlineServiceConstant.swift */; };
+		100DFC9B25C5B998004C7F12 /* MedlineLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100DFC9A25C5B998004C7F12 /* MedlineLoginViewModel.swift */; };
+		100DFCCD25C7CACE004C7F12 /* MedlineServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100DFCCC25C7CACE004C7F12 /* MedlineServiceManager.swift */; };
+		100DFCEB25C7CCAE004C7F12 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100DFCEA25C7CCAE004C7F12 /* String+Extension.swift */; };
+		100DFD0B25C7D352004C7F12 /* MedlineAuthServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100DFD0A25C7D352004C7F12 /* MedlineAuthServiceManager.swift */; };
+		100DFD4125C8796F004C7F12 /* MedlineCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100DFD4025C8796F004C7F12 /* MedlineCommon.swift */; };
+		101E4E5125FA0495004C4B4E /* MedlineWebViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E4E5025FA0495004C4B4E /* MedlineWebViewControllerTests.swift */; };
+		1027B83525F6322F0011F602 /* MedlineRegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1027B83425F6322F0011F602 /* MedlineRegisterRequest.swift */; };
+		1027B84225F632680011F602 /* MedlineRegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1027B84125F632680011F602 /* MedlineRegisterResponse.swift */; };
+		1027B8F225F753450011F602 /* MedlineErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1027B8F125F753450011F602 /* MedlineErrorManager.swift */; };
+		1027BA2625F7C5C10011F602 /* MedlineRegisterModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1027BA2525F7C5C10011F602 /* MedlineRegisterModuleTests.swift */; };
+		1027BA4B25F7F1ED0011F602 /* MedlineBaseViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1027BA4A25F7F1EC0011F602 /* MedlineBaseViewControllerTests.swift */; };
+		1037A07C25E97F91008AAC31 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037A07B25E97F91008AAC31 /* UILabel+Extension.swift */; };
+		103A3AF725F2812B000F9C9F /* MedlineErrorText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 103A3AF525F2812B000F9C9F /* MedlineErrorText.xib */; };
+		103A3AF825F2812B000F9C9F /* MedlineErrorText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103A3AF625F2812B000F9C9F /* MedlineErrorText.swift */; };
+		103A662725E529EF004BF88F /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 103A662625E529EF004BF88F /* Color.xcassets */; };
+		103A663125E52E06004BF88F /* Glober-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 103A662E25E52E06004BF88F /* Glober-Regular.otf */; };
+		103A663225E52E06004BF88F /* Glober-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 103A662F25E52E06004BF88F /* Glober-Bold.otf */; };
+		103A663325E52E06004BF88F /* Glober-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 103A663025E52E06004BF88F /* Glober-ExtraBold.otf */; };
+		104A5F1225CBE5D700AA4670 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 104A5F1125CBE5D700AA4670 /* Localizable.strings */; };
+		1087A60F25C98A8D00AB45DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1087A60E25C98A8D00AB45DD /* GoogleService-Info.plist */; };
+		10DBD1E025DAC37800FD34AB /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DBD1DF25DAC37800FD34AB /* Environment.swift */; };
+		10F691F325D1A5F700FBDB40 /* MedlineRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F691F225D1A5F700FBDB40 /* MedlineRegisterViewModel.swift */; };
+		10F6920625D4335E00FBDB40 /* MedlineBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F6920525D4335E00FBDB40 /* MedlineBaseViewController.swift */; };
+		143BC7AA0E2CAFFE99842745 /* Pods_Medline_DigitalSkinHealthTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04781A76AB1C1C7F98B31EB0 /* Pods_Medline_DigitalSkinHealthTests.framework */; };
+		466EF7C725F7CBC60028B3FB /* MedlineResetPasswordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466EF7C625F7CBC60028B3FB /* MedlineResetPasswordTests.swift */; };
+		4679861B25F73BED002619A1 /* MedlineResetPasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4679861A25F73BED002619A1 /* MedlineResetPasswordRequest.swift */; };
+		4679862225F74201002619A1 /* MedlineResetPasswordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4679862125F74201002619A1 /* MedlineResetPasswordResponse.swift */; };
+		4679862925F74586002619A1 /* MedlineResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4679862825F74586002619A1 /* MedlineResetPasswordViewModel.swift */; };
+		46CFF81825F91E5A00357C6F /* MedlineFullScreenMessageViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFF81725F91E5A00357C6F /* MedlineFullScreenMessageViewTests.swift */; };
+		46E63B5425E0215D00537F59 /* MedlineKeychainData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E63B5325E0215D00537F59 /* MedlineKeychainData.swift */; };
+		46E63B9725E0868E00537F59 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B8D25E0868700537F59 /* OpenSans-Regular.ttf */; };
+		46E63B9825E0868E00537F59 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B8D25E0868700537F59 /* OpenSans-Regular.ttf */; };
+		46E63B9925E0868E00537F59 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B8D25E0868700537F59 /* OpenSans-Regular.ttf */; };
+		46E63B9A25E0868E00537F59 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B8E25E0868700537F59 /* OpenSans-ExtraBoldItalic.ttf */; };
+		46E63B9B25E0868E00537F59 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B8E25E0868700537F59 /* OpenSans-ExtraBoldItalic.ttf */; };
+		46E63B9C25E0868E00537F59 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B8E25E0868700537F59 /* OpenSans-ExtraBoldItalic.ttf */; };
+		46E63B9D25E0868E00537F59 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B8F25E0868800537F59 /* OpenSans-BoldItalic.ttf */; };
+		46E63B9E25E0868E00537F59 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B8F25E0868800537F59 /* OpenSans-BoldItalic.ttf */; };
+		46E63B9F25E0868E00537F59 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B8F25E0868800537F59 /* OpenSans-BoldItalic.ttf */; };
+		46E63BA025E0868E00537F59 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B9025E0868900537F59 /* OpenSans-LightItalic.ttf */; };
+		46E63BA125E0868E00537F59 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B9025E0868900537F59 /* OpenSans-LightItalic.ttf */; };
+		46E63BA225E0868E00537F59 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B9025E0868900537F59 /* OpenSans-LightItalic.ttf */; };
+		46E63BA325E0868E00537F59 /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B9125E0868A00537F59 /* OpenSans-SemiBoldItalic.ttf */; };
+		46E63BA425E0868E00537F59 /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B9125E0868A00537F59 /* OpenSans-SemiBoldItalic.ttf */; };
+		46E63BA525E0868E00537F59 /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B9125E0868A00537F59 /* OpenSans-SemiBoldItalic.ttf */; };
+		46E63BA625E0868E00537F59 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B9225E0868A00537F59 /* OpenSans-SemiBold.ttf */; };
+		46E63BA725E0868E00537F59 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B9225E0868A00537F59 /* OpenSans-SemiBold.ttf */; };
+		46E63BA825E0868E00537F59 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B9225E0868A00537F59 /* OpenSans-SemiBold.ttf */; };
+		46E63BA925E0868E00537F59 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B9325E0868B00537F59 /* OpenSans-Bold.ttf */; };
+		46E63BAA25E0868E00537F59 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B9325E0868B00537F59 /* OpenSans-Bold.ttf */; };
+		46E63BAB25E0868E00537F59 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B9325E0868B00537F59 /* OpenSans-Bold.ttf */; };
+		46E63BAC25E0868E00537F59 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B9425E0868C00537F59 /* OpenSans-Light.ttf */; };
+		46E63BAD25E0868E00537F59 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B9425E0868C00537F59 /* OpenSans-Light.ttf */; };
+		46E63BAE25E0868E00537F59 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B9425E0868C00537F59 /* OpenSans-Light.ttf */; };
+		46E63BAF25E0868E00537F59 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B9525E0868D00537F59 /* OpenSans-ExtraBold.ttf */; };
+		46E63BB025E0868E00537F59 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B9525E0868D00537F59 /* OpenSans-ExtraBold.ttf */; };
+		46E63BB125E0868E00537F59 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B9525E0868D00537F59 /* OpenSans-ExtraBold.ttf */; };
+		46E63BB225E0868E00537F59 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B9625E0868E00537F59 /* OpenSans-Italic.ttf */; };
+		46E63BB325E0868E00537F59 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B9625E0868E00537F59 /* OpenSans-Italic.ttf */; };
+		46E63BB425E0868E00537F59 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63B9625E0868E00537F59 /* OpenSans-Italic.ttf */; };
+		46E63BBD25E088E900537F59 /* Glober-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63BBB25E088E800537F59 /* Glober-SemiBold.otf */; };
+		46E63BBE25E088E900537F59 /* Glober-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63BBB25E088E800537F59 /* Glober-SemiBold.otf */; };
+		46E63BBF25E088E900537F59 /* Glober-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63BBB25E088E800537F59 /* Glober-SemiBold.otf */; };
+		46E63BC025E088E900537F59 /* Glober-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63BBC25E088E900537F59 /* Glober-Thin.otf */; };
+		46E63BC125E088E900537F59 /* Glober-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63BBC25E088E900537F59 /* Glober-Thin.otf */; };
+		46E63BC225E088E900537F59 /* Glober-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E63BBC25E088E900537F59 /* Glober-Thin.otf */; };
+		46E63D7E25E3D1DE00537F59 /* MedlineResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E63D7725E3D1DA00537F59 /* MedlineResetPasswordViewController.swift */; };
+		46E63D8125E3D1DE00537F59 /* MedlineLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E63D7825E3D1DB00537F59 /* MedlineLoginViewController.swift */; };
+		46E63D8725E3D1DE00537F59 /* MedlineRegisterAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E63D7A25E3D1DC00537F59 /* MedlineRegisterAccountViewController.swift */; };
+		46E63D8A25E3D1DE00537F59 /* MedlineWebContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E63D7B25E3D1DD00537F59 /* MedlineWebContentViewController.swift */; };
+		46E63D8D25E3D1DE00537F59 /* MedlineForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E63D7C25E3D1DE00537F59 /* MedlineForgotPasswordViewController.swift */; };
+		46E63D9025E3D1DE00537F59 /* MedlineFullScreenMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E63D7D25E3D1DE00537F59 /* MedlineFullScreenMessageViewController.swift */; };
+		6A4F9E81F9568359487FF788 /* Pods_Medline_DigitalSkinHealthUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA5D19DCAED795F778B90D3 /* Pods_Medline_DigitalSkinHealthUITests.framework */; };
+		8A0CB1A025F7AD0700F75E02 /* MedlineForgotPasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CB19F25F7AD0700F75E02 /* MedlineForgotPasswordRequest.swift */; };
+		8A0CB1A525F7AD1000F75E02 /* MedlineForgotPasswordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CB1A425F7AD1000F75E02 /* MedlineForgotPasswordResponse.swift */; };
+		8A0CB1AA25F7AD2300F75E02 /* MedlineForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CB1A925F7AD2300F75E02 /* MedlineForgotPasswordViewModel.swift */; };
+		8A0CB26B25F889E700F75E02 /* MedlineForgotPasswordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CB26A25F889E700F75E02 /* MedlineForgotPasswordTests.swift */; };
+		9B7F1A0725DFF39100A153CE /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7F1A0625DFF39100A153CE /* UIApplication+Extension.swift */; };
+		9BB20DDA2600CAB600C83527 /* splashBgMain.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BB20DD72600CAB500C83527 /* splashBgMain.png */; };
+		9BB20DDB2600CAB600C83527 /* splashBgMain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BB20DD82600CAB500C83527 /* splashBgMain@2x.png */; };
+		9BB20DDC2600CAB600C83527 /* splashBgMain@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BB20DD92600CAB500C83527 /* splashBgMain@3x.png */; };
+		9BB2108026026B3600C83527 /* iPadSplashBgMain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BB2107D26026B3500C83527 /* iPadSplashBgMain@2x.png */; };
+		9BB2108126026B3600C83527 /* iPadSplashBgMain@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BB2107E26026B3600C83527 /* iPadSplashBgMain@3x.png */; };
+		9BB2108226026B3600C83527 /* iPadSplashBgMain@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BB2107F26026B3600C83527 /* iPadSplashBgMain@1x.png */; };
+		E8AEF8BE5A7B40DCEBC181C3 /* Pods_Medline_DigitalSkinHealth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 074604D3202CE965FBB7AEE5 /* Pods_Medline_DigitalSkinHealth.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		100DFC6D25C5B56B004C7F12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 100DFC4B25C5B56A004C7F12 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 100DFC5225C5B56A004C7F12;
+			remoteInfo = "Medline-DigitalSkinHealth";
+		};
+		100DFC7825C5B56B004C7F12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 100DFC4B25C5B56A004C7F12 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 100DFC5225C5B56A004C7F12;
+			remoteInfo = "Medline-DigitalSkinHealth";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		000790A425D561640000C4EF /* MedlineCardViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedlineCardViewCollectionViewCell.swift; sourceTree = "<group>"; };
+		000D7EF025E8D9AC00BBE2A8 /* MedlinePasswordValidationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedlinePasswordValidationView.xib; sourceTree = "<group>"; };
+		000D7EF525E8DA0100BBE2A8 /* MedlinePasswordValidationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedlinePasswordValidationView.swift; sourceTree = "<group>"; };
+		000D7EFA25E91FBA00BBE2A8 /* Main_iPad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
+		000D7EFF25E91FDB00BBE2A8 /* LaunchScreen_iPad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen_iPad.storyboard; sourceTree = "<group>"; };
+		001A247225DE58C3005E99A6 /* MedlineDropDownButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedlineDropDownButton.swift; sourceTree = "<group>"; };
+		001A247C25DE592A005E99A6 /* MedlineDropDownViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedlineDropDownViewModel.swift; sourceTree = "<group>"; };
+		001A24D625DE88C1005E99A6 /* Userdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Userdata.json; sourceTree = "<group>"; };
+		001A24D725DE88C2005E99A6 /* versionupdate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = versionupdate.json; sourceTree = "<group>"; };
+		001E975F25F79EC6009C616B /* MedlineLoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedlineLoginRequest.swift; sourceTree = "<group>"; };
+		001E976425F79ED5009C616B /* MedlineLoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedlineLoginResponse.swift; sourceTree = "<group>"; };
+		001E977425F7B199009C616B /* MedlineLoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedlineLoginTests.swift; sourceTree = "<group>"; };
+		004802D825ECF38D00D04161 /* MedlinePasswordValidationView_iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedlinePasswordValidationView_iPad.xib; sourceTree = "<group>"; };
+		004F2EFD25D51CEC005CAA8F /* MedlineDeviceInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedlineDeviceInformation.swift; sourceTree = "<group>"; };
+		004F2F0325D51D38005CAA8F /* MedlineTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedlineTextField.swift; sourceTree = "<group>"; };
+		004F2F0525D51D39005CAA8F /* MedlineButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedlineButton.swift; sourceTree = "<group>"; };
+		004F2F0625D51D39005CAA8F /* MedlineLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedlineLabel.swift; sourceTree = "<group>"; };
+		004F2F3125D52118005CAA8F /* MedlineImageSliderCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedlineImageSliderCollectionViewCell.swift; sourceTree = "<group>"; };
+		004F2F3625D5211C005CAA8F /* MedlineImageSliderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedlineImageSliderCollectionViewCell.xib; sourceTree = "<group>"; };
+		005A3DB525FFAAA000534EB2 /* MedlineHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedlineHomeViewController.swift; sourceTree = "<group>"; };
+		005A3DC025FFB6D700534EB2 /* MedlineHomeScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedlineHomeScreenTests.swift; sourceTree = "<group>"; };
+		0071C98C25DA4243006FDAF5 /* MedlineChipCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedlineChipCollectionViewCell.swift; sourceTree = "<group>"; };
+		00962F3A25E00DB100FB4123 /* StoreKitTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKitTest.framework; path = Developer/Library/Frameworks/StoreKitTest.framework; sourceTree = SDKROOT; };
+		00B4B07D25FB6CF000C3E528 /* MedlineLoginResponseData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MedlineLoginResponseData.json; sourceTree = "<group>"; };
+		03407BCFAF09DDF0AD85643C /* Pods-Medline-DigitalSkinHealth.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Medline-DigitalSkinHealth.staging.xcconfig"; path = "Target Support Files/Pods-Medline-DigitalSkinHealth/Pods-Medline-DigitalSkinHealth.staging.xcconfig"; sourceTree = "<group>"; };
+		04781A76AB1C1C7F98B31EB0 /* Pods_Medline_DigitalSkinHealthTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Medline_DigitalSkinHealthTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		074604D3202CE965FBB7AEE5 /* Pods_Medline_DigitalSkinHealth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Medline_DigitalSkinHealth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10013EF225EE262200106C5A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		100DFC5325C5B56A004C7F12 /* Medline-DigitalSkinHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Medline-DigitalSkinHealth.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		100DFC5625C5B56A004C7F12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		100DFC5825C5B56A004C7F12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		100DFC5D25C5B56A004C7F12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		100DFC6025C5B56A004C7F12 /* Medline_DigitalSkinHealth.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Medline_DigitalSkinHealth.xcdatamodel; sourceTree = "<group>"; };
+		100DFC6225C5B56B004C7F12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		100DFC6525C5B56B004C7F12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		100DFC6725C5B56B004C7F12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		100DFC6C25C5B56B004C7F12 /* Medline-DigitalSkinHealthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Medline-DigitalSkinHealthTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		100DFC7025C5B56B004C7F12 /* Medline_DigitalSkinHealthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medline_DigitalSkinHealthTests.swift; sourceTree = "<group>"; };
+		100DFC7225C5B56B004C7F12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		100DFC7725C5B56B004C7F12 /* Medline-DigitalSkinHealthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Medline-DigitalSkinHealthUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		100DFC7B25C5B56B004C7F12 /* Medline_DigitalSkinHealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medline_DigitalSkinHealthUITests.swift; sourceTree = "<group>"; };
+		100DFC7D25C5B56B004C7F12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		100DFC9325C5B97D004C7F12 /* MedlineAppConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedlineAppConstant.swift; sourceTree = "<group>"; };
+		100DFC9425C5B97D004C7F12 /* MedlineServiceConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedlineServiceConstant.swift; sourceTree = "<group>"; };
+		100DFC9A25C5B998004C7F12 /* MedlineLoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedlineLoginViewModel.swift; sourceTree = "<group>"; };
+		100DFCCC25C7CACE004C7F12 /* MedlineServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedlineServiceManager.swift; sourceTree = "<group>"; };
+		100DFCEA25C7CCAE004C7F12 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		100DFD0A25C7D352004C7F12 /* MedlineAuthServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedlineAuthServiceManager.swift; sourceTree = "<group>"; };
+		100DFD4025C8796F004C7F12 /* MedlineCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedlineCommon.swift; sourceTree = "<group>"; };
+		101E4E5025FA0495004C4B4E /* MedlineWebViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedlineWebViewControllerTests.swift; sourceTree = "<group>"; };
+		101E4E5525FA06C6004C4B4E /* MedlineAppDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedlineAppDate.swift; sourceTree = "<group>"; };
+		1027B83425F6322F0011F602 /* MedlineRegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedlineRegisterRequest.swift; sourceTree = "<group>"; };
+		1027B84125F632680011F602 /* MedlineRegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedlineRegisterResponse.swift; sourceTree = "<group>"; };
+		1027B8F125F753450011F602 /* MedlineErrorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedlineErrorManager.swift; sourceTree = "<group>"; };
+		1027BA2525F7C5C10011F602 /* MedlineRegisterModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedlineRegisterModuleTests.swift; sourceTree = "<group>"; };
+		1027BA4A25F7F1EC0011F602 /* MedlineBaseViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedlineBaseViewControllerTests.swift; sourceTree = "<group>"; };
+		1037A07B25E97F91008AAC31 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		103A3AF525F2812B000F9C9F /* MedlineErrorText.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedlineErrorText.xib; sourceTree = "<group>"; };
+		103A3AF625F2812B000F9C9F /* MedlineErrorText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedlineErrorText.swift; sourceTree = "<group>"; };
+		103A662625E529EF004BF88F /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		103A662E25E52E06004BF88F /* Glober-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glober-Regular.otf"; sourceTree = "<group>"; };
+		103A662F25E52E06004BF88F /* Glober-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glober-Bold.otf"; sourceTree = "<group>"; };
+		103A663025E52E06004BF88F /* Glober-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glober-ExtraBold.otf"; sourceTree = "<group>"; };
+		104A5F1125CBE5D700AA4670 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		1087A60E25C98A8D00AB45DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		10DBD1DF25DAC37800FD34AB /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		10DBD1E725DAC3A900FD34AB /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		10DBD1E825DAC3B500FD34AB /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
+		10DBD1E925DAC3CA00FD34AB /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		10F691F225D1A5F700FBDB40 /* MedlineRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedlineRegisterViewModel.swift; sourceTree = "<group>"; };
+		10F691FA25D2A50000FBDB40 /* UITableview+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableview+Extension.swift"; sourceTree = "<group>"; };
+		10F6920525D4335E00FBDB40 /* MedlineBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedlineBaseViewController.swift; sourceTree = "<group>"; };
+		115A23AB209C25E24CE76B13 /* Pods-Medline-DigitalSkinHealthTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Medline-DigitalSkinHealthTests.release.xcconfig"; path = "Target Support Files/Pods-Medline-DigitalSkinHealthTests/Pods-Medline-DigitalSkinHealthTests.release.xcconfig"; sourceTree = "<group>"; };
+		12A5137AF6B9411A9982B0B7 /* Pods-Medline-DigitalSkinHealthTests.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Medline-DigitalSkinHealthTests.production.xcconfig"; path = "Target Support Files/Pods-Medline-DigitalSkinHealthTests/Pods-Medline-DigitalSkinHealthTests.production.xcconfig"; sourceTree = "<group>"; };
+		1EAC28EA11CC4C41798310E8 /* Pods-Medline-DigitalSkinHealth-Medline-DigitalSkinHealthUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Medline-DigitalSkinHealth-Medline-DigitalSkinHealthUITests.debug.xcconfig"; path = "Target Support Files/Pods-Medline-DigitalSkinHealth-Medline-DigitalSkinHealthUITests/Pods-Medline-DigitalSkinHealth-Medline-DigitalSkinHealthUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3760D6BD9B6883CE645174AD /* Pods-Medline-DigitalSkinHealth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Medline-DigitalSkinHealth.release.xcconfig"; path = "Target Support Files/Pods-Medline-DigitalSkinHealth/Pods-Medline-DigitalSkinHealth.release.xcconfig"; sourceTree = "<group>"; };
+		3DF1B643BE05AE96D388CCF6 /* Pods-Medline-DigitalSkinHealth-Medline-DigitalSkinHealthUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Medline-DigitalSkinHealth-Medline-DigitalSkinHealthUITests.release.xcconfig"; path = "Target Support Files/Pods-Medline-DigitalSkinHealth-Medline-DigitalSkinHealthUITests/Pods-Medline-DigitalSkinHealth-Medline-DigitalSkinHealthUITests.release.xcconfig"; sourceTree = "<group>"; };
+		466EF7C625F7CBC60028B3FB /* MedlineResetPasswordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedlineResetPasswordTests.swift; sourceTree = "<group>"; };
+		4679861A25F73BED002619A1 /* MedlineResetPasswordRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedlineResetPasswordRequest.swift; sourceTree = "<group>"; };
+		4679862125F74201002619A1 /* MedlineResetPasswordResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedlineResetPasswordResponse.swift; sourceTree = "<group>"; };
+		4679862825F74586002619A1 /* MedlineResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedlineResetPasswordViewModel.swift; sourceTree = "<group>"; };
+		46CFF81725F91E5A00357C6F /* MedlineFullScreenMessageViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedlineFullScreenMessageViewTests.swift; sourceTree = "<group>"; };
+		46E63B5325E0215D00537F59 /* MedlineKeychainData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedlineKeychainData.swift; sourceTree = "<group>"; };
+		46E63B8D25E0868700537F59 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		46E63B8E25E0868700537F59 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		46E63B8F25E0868800537F59 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		46E63B9025E0868900537F59 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		46E63B9125E0868A00537F59 /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		46E63B9225E0868A00537F59 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		46E63B9325E0868B00537F59 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		46E63B9425E0868C00537F59 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		46E63B9525E0868D00537F59 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		46E63B9625E0868E00537F59 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		46E63BBB25E088E800537F59 /* Glober-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glober-SemiBold.otf"; sourceTree = "<group>"; };
+		46E63BBC25E088E900537F59 /* Glober-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glober-Thin.otf"; sourceTree = "<group>"; };
+		46E63D6025E3AAEB00537F59 /* MedlineDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedlineDatabaseManager.swift; sourceTree = "<group>"; };
+		46E63D7725E3D1DA00537F59 /* MedlineResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedlineResetPasswordViewController.swift; sourceTree = "<group>"; };
+		46E63D7825E3D1DB00537F59 /* MedlineLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedlineLoginViewController.swift; sourceTree = "<group>"; };
+		46E63D7A25E3D1DC00537F59 /* MedlineRegisterAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedlineRegisterAccountViewController.swift; sourceTree = "<group>"; };
+		46E63D7B25E3D1DD00537F59 /* MedlineWebContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedlineWebContentViewController.swift; sourceTree = "<group>"; };
+		46E63D7C25E3D1DE00537F59 /* MedlineForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedlineForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		46E63D7D25E3D1DE00537F59 /* MedlineFullScreenMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedlineFullScreenMessageViewController.swift; sourceTree = "<group>"; };
+		4DA548442D3D1EA2CC261BA3 /* Pods-Medline-DigitalSkinHealthUITests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Medline-DigitalSkinHealthUITests.staging.xcconfig"; path = "Target Support Files/Pods-Medline-DigitalSkinHealthUITests/Pods-Medline-DigitalSkinHealthUITests.staging.xcconfig"; sourceTree = "<group>"; };
+		5D27B0EF69AB8101180A8766 /* Pods-Medline-DigitalSkinHealthTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Medline-DigitalSkinHealthTests.staging.xcconfig"; path = "Target Support Files/Pods-Medline-DigitalSkinHealthTests/Pods-Medline-DigitalSkinHealthTests.staging.xcconfig"; sourceTree = "<group>"; };
+		5EA5D19DCAED795F778B90D3 /* Pods_Medline_DigitalSkinHealthUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Medline_DigitalSkinHealthUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		601DC27D25859ECA8D2A79FB /* Pods-Medline-DigitalSkinHealth.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Medline-DigitalSkinHealth.development.xcconfig"; path = "Target Support Files/Pods-Medline-DigitalSkinHealth/Pods-Medline-DigitalSkinHealth.development.xcconfig"; sourceTree = "<group>"; };
+		744DDBE7195B7E68C8949ACF /* Pods-Medline-DigitalSkinHealth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Medline-DigitalSkinHealth.debug.xcconfig"; path = "Target Support Files/Pods-Medline-DigitalSkinHealth/Pods-Medline-DigitalSkinHealth.debug.xcconfig"; sourceTree = "<group>"; };
+		7BEDF9A97A366191C498BF6E /* Pods-Medline-DigitalSkinHealthUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Medline-DigitalSkinHealthUITests.release.xcconfig"; path = "Target Support Files/Pods-Medline-DigitalSkinHealthUITests/Pods-Medline-DigitalSkinHealthUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8A0CB19F25F7AD0700F75E02 /* MedlineForgotPasswordRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedlineForgotPasswordRequest.swift; sourceTree = "<group>"; };
+		8A0CB1A425F7AD1000F75E02 /* MedlineForgotPasswordResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedlineForgotPasswordResponse.swift; sourceTree = "<group>"; };
+		8A0CB1A925F7AD2300F75E02 /* MedlineForgotPasswordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedlineForgotPasswordViewModel.swift; sourceTree = "<group>"; };
+		8A0CB26A25F889E700F75E02 /* MedlineForgotPasswordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedlineForgotPasswordTests.swift; sourceTree = "<group>"; };
+		93F73364EE1589CE25CF0878 /* Pods-Medline-DigitalSkinHealthUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Medline-DigitalSkinHealthUITests.debug.xcconfig"; path = "Target Support Files/Pods-Medline-DigitalSkinHealthUITests/Pods-Medline-DigitalSkinHealthUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9444D5EBF6039709F69FF805 /* Pods-Medline-DigitalSkinHealthUITests.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Medline-DigitalSkinHealthUITests.development.xcconfig"; path = "Target Support Files/Pods-Medline-DigitalSkinHealthUITests/Pods-Medline-DigitalSkinHealthUITests.development.xcconfig"; sourceTree = "<group>"; };
+		96F81E04DBBB1474E6417EFE /* Pods-Medline-DigitalSkinHealthUITests.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Medline-DigitalSkinHealthUITests.production.xcconfig"; path = "Target Support Files/Pods-Medline-DigitalSkinHealthUITests/Pods-Medline-DigitalSkinHealthUITests.production.xcconfig"; sourceTree = "<group>"; };
+		9B7F1A0625DFF39100A153CE /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		9BB20DD72600CAB500C83527 /* splashBgMain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashBgMain.png; sourceTree = "<group>"; };
+		9BB20DD82600CAB500C83527 /* splashBgMain@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splashBgMain@2x.png"; sourceTree = "<group>"; };
+		9BB20DD92600CAB500C83527 /* splashBgMain@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splashBgMain@3x.png"; sourceTree = "<group>"; };
+		9BB2107D26026B3500C83527 /* iPadSplashBgMain@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadSplashBgMain@2x.png"; sourceTree = "<group>"; };
+		9BB2107E26026B3600C83527 /* iPadSplashBgMain@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadSplashBgMain@3x.png"; sourceTree = "<group>"; };
+		9BB2107F26026B3600C83527 /* iPadSplashBgMain@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadSplashBgMain@1x.png"; sourceTree = "<group>"; };
+		A526DF8DAA8FC4D492DD6AFF /* Pods-Medline-DigitalSkinHealthTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Medline-DigitalSkinHealthTests.debug.xcconfig"; path = "Target Support Files/Pods-Medline-DigitalSkinHealthTests/Pods-Medline-DigitalSkinHealthTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EBC0060A442E6110C5B5508B /* Pods-Medline-DigitalSkinHealth.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Medline-DigitalSkinHealth.production.xcconfig"; path = "Target Support Files/Pods-Medline-DigitalSkinHealth/Pods-Medline-DigitalSkinHealth.production.xcconfig"; sourceTree = "<group>"; };
+		F4B05018F2C139BBE129132E /* Pods-Medline-DigitalSkinHealthTests.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Medline-DigitalSkinHealthTests.development.xcconfig"; path = "Target Support Files/Pods-Medline-DigitalSkinHealthTests/Pods-Medline-DigitalSkinHealthTests.development.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		100DFC5025C5B56A004C7F12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8AEF8BE5A7B40DCEBC181C3 /* Pods_Medline_DigitalSkinHealth.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100DFC6925C5B56B004C7F12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				143BC7AA0E2CAFFE99842745 /* Pods_Medline_DigitalSkinHealthTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100DFC7425C5B56B004C7F12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A4F9E81F9568359487FF788 /* Pods_Medline_DigitalSkinHealthUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		000D7EEF25E8D74C00BBE2A8 /* ValidationsView */ = {
+			isa = PBXGroup;
+			children = (
+				000D7EF025E8D9AC00BBE2A8 /* MedlinePasswordValidationView.xib */,
+				000D7EF525E8DA0100BBE2A8 /* MedlinePasswordValidationView.swift */,
+				004802D825ECF38D00D04161 /* MedlinePasswordValidationView_iPad.xib */,
+			);
+			path = ValidationsView;
+			sourceTree = "<group>";
+		};
+		004F2F0225D51D08005CAA8F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				000D7EEF25E8D74C00BBE2A8 /* ValidationsView */,
+				004F2F3025D52106005CAA8F /* CollectionViewCell */,
+				103A3AC025F26A95000F9C9F /* ErrorTextView */,
+				004F2F0525D51D39005CAA8F /* MedlineButton.swift */,
+				004F2F0625D51D39005CAA8F /* MedlineLabel.swift */,
+				004F2F0325D51D38005CAA8F /* MedlineTextField.swift */,
+				001A247225DE58C3005E99A6 /* MedlineDropDownButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		004F2F3025D52106005CAA8F /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				004F2F3125D52118005CAA8F /* MedlineImageSliderCollectionViewCell.swift */,
+				004F2F3625D5211C005CAA8F /* MedlineImageSliderCollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		004F2F3E25D52374005CAA8F /* FontFiles */ = {
+			isa = PBXGroup;
+			children = (
+				103A662F25E52E06004BF88F /* Glober-Bold.otf */,
+				103A663025E52E06004BF88F /* Glober-ExtraBold.otf */,
+				103A662E25E52E06004BF88F /* Glober-Regular.otf */,
+				46E63BBB25E088E800537F59 /* Glober-SemiBold.otf */,
+				46E63BBC25E088E900537F59 /* Glober-Thin.otf */,
+				46E63B9325E0868B00537F59 /* OpenSans-Bold.ttf */,
+				46E63B8F25E0868800537F59 /* OpenSans-BoldItalic.ttf */,
+				46E63B9525E0868D00537F59 /* OpenSans-ExtraBold.ttf */,
+				46E63B8E25E0868700537F59 /* OpenSans-ExtraBoldItalic.ttf */,
+				46E63B9625E0868E00537F59 /* OpenSans-Italic.ttf */,
+				46E63B9425E0868C00537F59 /* OpenSans-Light.ttf */,
+				46E63B9025E0868900537F59 /* OpenSans-LightItalic.ttf */,
+				46E63B8D25E0868700537F59 /* OpenSans-Regular.ttf */,
+				46E63B9225E0868A00537F59 /* OpenSans-SemiBold.ttf */,
+				46E63B9125E0868A00537F59 /* OpenSans-SemiBoldItalic.ttf */,
+			);
+			path = FontFiles;
+			sourceTree = "<group>";
+		};
+		100DFC4A25C5B56A004C7F12 = {
+			isa = PBXGroup;
+			children = (
+				100DFC5525C5B56A004C7F12 /* Medline-DigitalSkinHealth */,
+				100DFC6F25C5B56B004C7F12 /* Medline-DigitalSkinHealthTests */,
+				100DFC7A25C5B56B004C7F12 /* Medline-DigitalSkinHealthUITests */,
+				100DFC5425C5B56A004C7F12 /* Products */,
+				F6D8C6A8DB73EBA480D19D57 /* Pods */,
+				88FF820550FB1A54B7CA895C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		100DFC5425C5B56A004C7F12 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				100DFC5325C5B56A004C7F12 /* Medline-DigitalSkinHealth.app */,
+				100DFC6C25C5B56B004C7F12 /* Medline-DigitalSkinHealthTests.xctest */,
+				100DFC7725C5B56B004C7F12 /* Medline-DigitalSkinHealthUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		100DFC5525C5B56A004C7F12 /* Medline-DigitalSkinHealth */ = {
+			isa = PBXGroup;
+			children = (
+				100DFC8C25C5B578004C7F12 /* App */,
+				100DFCAE25C5BA22004C7F12 /* Model */,
+				100DFCA325C5B9DF004C7F12 /* View */,
+				100DFC9F25C5B9D8004C7F12 /* ViewModel */,
+				10F691CB25D16C5100FBDB40 /* CustomView */,
+				100DFCAD25C5BA0F004C7F12 /* CoreDataManager */,
+				100DFCAF25C5BA33004C7F12 /* ServiceManager */,
+				1027B8F025F753140011F602 /* ErrorManager */,
+				100DFCA725C5B9EB004C7F12 /* Constant */,
+				100DFCEF25C7CCB2004C7F12 /* Extensions */,
+				100DFCB025C5BA4B004C7F12 /* Utilities */,
+				004F2F0225D51D08005CAA8F /* Components */,
+				100DFCAC25C5BA06004C7F12 /* Storyboards */,
+				10DBD1DE25DAC35D00FD34AB /* Environment */,
+				104A5F0025CBD56900AA4670 /* SupportingFiles */,
+				100DFC6225C5B56B004C7F12 /* Assets.xcassets */,
+				103A662625E529EF004BF88F /* Color.xcassets */,
+				100DFC6725C5B56B004C7F12 /* Info.plist */,
+				1087A60E25C98A8D00AB45DD /* GoogleService-Info.plist */,
+			);
+			path = "Medline-DigitalSkinHealth";
+			sourceTree = "<group>";
+		};
+		100DFC6F25C5B56B004C7F12 /* Medline-DigitalSkinHealthTests */ = {
+			isa = PBXGroup;
+			children = (
+				100DFC7025C5B56B004C7F12 /* Medline_DigitalSkinHealthTests.swift */,
+				001E977425F7B199009C616B /* MedlineLoginTests.swift */,
+				1027BA4A25F7F1EC0011F602 /* MedlineBaseViewControllerTests.swift */,
+				1027BA2525F7C5C10011F602 /* MedlineRegisterModuleTests.swift */,
+				466EF7C625F7CBC60028B3FB /* MedlineResetPasswordTests.swift */,
+				8A0CB26A25F889E700F75E02 /* MedlineForgotPasswordTests.swift */,
+				46CFF81725F91E5A00357C6F /* MedlineFullScreenMessageViewTests.swift */,
+				101E4E5025FA0495004C4B4E /* MedlineWebViewControllerTests.swift */,
+				005A3DC025FFB6D700534EB2 /* MedlineHomeScreenTests.swift */,
+				100DFC7225C5B56B004C7F12 /* Info.plist */,
+			);
+			path = "Medline-DigitalSkinHealthTests";
+			sourceTree = "<group>";
+		};
+		100DFC7A25C5B56B004C7F12 /* Medline-DigitalSkinHealthUITests */ = {
+			isa = PBXGroup;
+			children = (
+				100DFC7B25C5B56B004C7F12 /* Medline_DigitalSkinHealthUITests.swift */,
+				100DFC7D25C5B56B004C7F12 /* Info.plist */,
+			);
+			path = "Medline-DigitalSkinHealthUITests";
+			sourceTree = "<group>";
+		};
+		100DFC8C25C5B578004C7F12 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				100DFC5625C5B56A004C7F12 /* AppDelegate.swift */,
+				100DFC5825C5B56A004C7F12 /* SceneDelegate.swift */,
+				10F6920525D4335E00FBDB40 /* MedlineBaseViewController.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		100DFC9F25C5B9D8004C7F12 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				100DFC9A25C5B998004C7F12 /* MedlineLoginViewModel.swift */,
+				10F691F225D1A5F700FBDB40 /* MedlineRegisterViewModel.swift */,
+				8A0CB1A925F7AD2300F75E02 /* MedlineForgotPasswordViewModel.swift */,
+				4679862825F74586002619A1 /* MedlineResetPasswordViewModel.swift */,
+				001A247C25DE592A005E99A6 /* MedlineDropDownViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		100DFCA325C5B9DF004C7F12 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				005A3DB525FFAAA000534EB2 /* MedlineHomeViewController.swift */,
+				46E63D5F25E3A9D100537F59 /* Authentication */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		100DFCA725C5B9EB004C7F12 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				100DFC9325C5B97D004C7F12 /* MedlineAppConstant.swift */,
+				100DFC9425C5B97D004C7F12 /* MedlineServiceConstant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		100DFCAC25C5BA06004C7F12 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				100DFC6425C5B56B004C7F12 /* LaunchScreen.storyboard */,
+				100DFC5C25C5B56A004C7F12 /* Main.storyboard */,
+				000D7EFA25E91FBA00BBE2A8 /* Main_iPad.storyboard */,
+				000D7EFF25E91FDB00BBE2A8 /* LaunchScreen_iPad.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		100DFCAD25C5BA0F004C7F12 /* CoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				46E63B7F25E0812C00537F59 /* CoredataModel */,
+				100DFC5F25C5B56A004C7F12 /* Medline_DigitalSkinHealth.xcdatamodeld */,
+				46E63D6025E3AAEB00537F59 /* MedlineDatabaseManager.swift */,
+			);
+			path = CoreDataManager;
+			sourceTree = "<group>";
+		};
+		100DFCAE25C5BA22004C7F12 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1027B80425F61E070011F602 /* ServiceModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		100DFCAF25C5BA33004C7F12 /* ServiceManager */ = {
+			isa = PBXGroup;
+			children = (
+				100DFCCC25C7CACE004C7F12 /* MedlineServiceManager.swift */,
+				100DFD0A25C7D352004C7F12 /* MedlineAuthServiceManager.swift */,
+			);
+			path = ServiceManager;
+			sourceTree = "<group>";
+		};
+		100DFCB025C5BA4B004C7F12 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				004F2EFD25D51CEC005CAA8F /* MedlineDeviceInformation.swift */,
+				100DFD4025C8796F004C7F12 /* MedlineCommon.swift */,
+				46E63B5325E0215D00537F59 /* MedlineKeychainData.swift */,
+				101E4E5525FA06C6004C4B4E /* MedlineAppDate.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		100DFCEF25C7CCB2004C7F12 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				100DFCEA25C7CCAE004C7F12 /* String+Extension.swift */,
+				1037A07B25E97F91008AAC31 /* UILabel+Extension.swift */,
+				10F691FA25D2A50000FBDB40 /* UITableview+Extension.swift */,
+				9B7F1A0625DFF39100A153CE /* UIApplication+Extension.swift */,
+				10013EF225EE262200106C5A /* UIView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1027B80425F61E070011F602 /* ServiceModel */ = {
+			isa = PBXGroup;
+			children = (
+				1027B83225F631F40011F602 /* APIRequest */,
+				1027B83325F6320D0011F602 /* APIResponse */,
+			);
+			path = ServiceModel;
+			sourceTree = "<group>";
+		};
+		1027B83225F631F40011F602 /* APIRequest */ = {
+			isa = PBXGroup;
+			children = (
+				001E975F25F79EC6009C616B /* MedlineLoginRequest.swift */,
+				1027B83425F6322F0011F602 /* MedlineRegisterRequest.swift */,
+				8A0CB19F25F7AD0700F75E02 /* MedlineForgotPasswordRequest.swift */,
+				4679861A25F73BED002619A1 /* MedlineResetPasswordRequest.swift */,
+			);
+			path = APIRequest;
+			sourceTree = "<group>";
+		};
+		1027B83325F6320D0011F602 /* APIResponse */ = {
+			isa = PBXGroup;
+			children = (
+				001E976425F79ED5009C616B /* MedlineLoginResponse.swift */,
+				1027B84125F632680011F602 /* MedlineRegisterResponse.swift */,
+				4679862125F74201002619A1 /* MedlineResetPasswordResponse.swift */,
+				8A0CB1A425F7AD1000F75E02 /* MedlineForgotPasswordResponse.swift */,
+			);
+			path = APIResponse;
+			sourceTree = "<group>";
+		};
+		1027B8F025F753140011F602 /* ErrorManager */ = {
+			isa = PBXGroup;
+			children = (
+				1027B8F125F753450011F602 /* MedlineErrorManager.swift */,
+			);
+			path = ErrorManager;
+			sourceTree = "<group>";
+		};
+		103A3AC025F26A95000F9C9F /* ErrorTextView */ = {
+			isa = PBXGroup;
+			children = (
+				103A3AF625F2812B000F9C9F /* MedlineErrorText.swift */,
+				103A3AF525F2812B000F9C9F /* MedlineErrorText.xib */,
+			);
+			path = ErrorTextView;
+			sourceTree = "<group>";
+		};
+		104A5F0025CBD56900AA4670 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9BB2107F26026B3600C83527 /* iPadSplashBgMain@1x.png */,
+				9BB2107D26026B3500C83527 /* iPadSplashBgMain@2x.png */,
+				9BB2107E26026B3600C83527 /* iPadSplashBgMain@3x.png */,
+				9BB20DD72600CAB500C83527 /* splashBgMain.png */,
+				9BB20DD82600CAB500C83527 /* splashBgMain@2x.png */,
+				9BB20DD92600CAB500C83527 /* splashBgMain@3x.png */,
+				004F2F3E25D52374005CAA8F /* FontFiles */,
+				001A24D625DE88C1005E99A6 /* Userdata.json */,
+				001A24D725DE88C2005E99A6 /* versionupdate.json */,
+				104A5F1125CBE5D700AA4670 /* Localizable.strings */,
+				00B4B07D25FB6CF000C3E528 /* MedlineLoginResponseData.json */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		10DBD1DE25DAC35D00FD34AB /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				10DBD1DF25DAC37800FD34AB /* Environment.swift */,
+				10DBD1E725DAC3A900FD34AB /* Development.xcconfig */,
+				10DBD1E825DAC3B500FD34AB /* Staging.xcconfig */,
+				10DBD1E925DAC3CA00FD34AB /* Production.xcconfig */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		10F691CB25D16C5100FBDB40 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				000790A425D561640000C4EF /* MedlineCardViewCollectionViewCell.swift */,
+				0071C98C25DA4243006FDAF5 /* MedlineChipCollectionViewCell.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		46E63B7F25E0812C00537F59 /* CoredataModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoredataModel;
+			sourceTree = "<group>";
+		};
+		46E63D5F25E3A9D100537F59 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				46E63D7825E3D1DB00537F59 /* MedlineLoginViewController.swift */,
+				46E63D7A25E3D1DC00537F59 /* MedlineRegisterAccountViewController.swift */,
+				46E63D7725E3D1DA00537F59 /* MedlineResetPasswordViewController.swift */,
+				46E63D7C25E3D1DE00537F59 /* MedlineForgotPasswordViewController.swift */,
+				46E63D7D25E3D1DE00537F59 /* MedlineFullScreenMessageViewController.swift */,
+				46E63D7B25E3D1DD00537F59 /* MedlineWebContentViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		88FF820550FB1A54B7CA895C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00962F3A25E00DB100FB4123 /* StoreKitTest.framework */,
+				074604D3202CE965FBB7AEE5 /* Pods_Medline_DigitalSkinHealth.framework */,
+				04781A76AB1C1C7F98B31EB0 /* Pods_Medline_DigitalSkinHealthTests.framework */,
+				5EA5D19DCAED795F778B90D3 /* Pods_Medline_DigitalSkinHealthUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6D8C6A8DB73EBA480D19D57 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				744DDBE7195B7E68C8949ACF /* Pods-Medline-DigitalSkinHealth.debug.xcconfig */,
+				3760D6BD9B6883CE645174AD /* Pods-Medline-DigitalSkinHealth.release.xcconfig */,
+				1EAC28EA11CC4C41798310E8 /* Pods-Medline-DigitalSkinHealth-Medline-DigitalSkinHealthUITests.debug.xcconfig */,
+				3DF1B643BE05AE96D388CCF6 /* Pods-Medline-DigitalSkinHealth-Medline-DigitalSkinHealthUITests.release.xcconfig */,
+				A526DF8DAA8FC4D492DD6AFF /* Pods-Medline-DigitalSkinHealthTests.debug.xcconfig */,
+				115A23AB209C25E24CE76B13 /* Pods-Medline-DigitalSkinHealthTests.release.xcconfig */,
+				93F73364EE1589CE25CF0878 /* Pods-Medline-DigitalSkinHealthUITests.debug.xcconfig */,
+				7BEDF9A97A366191C498BF6E /* Pods-Medline-DigitalSkinHealthUITests.release.xcconfig */,
+				601DC27D25859ECA8D2A79FB /* Pods-Medline-DigitalSkinHealth.development.xcconfig */,
+				03407BCFAF09DDF0AD85643C /* Pods-Medline-DigitalSkinHealth.staging.xcconfig */,
+				EBC0060A442E6110C5B5508B /* Pods-Medline-DigitalSkinHealth.production.xcconfig */,
+				F4B05018F2C139BBE129132E /* Pods-Medline-DigitalSkinHealthTests.development.xcconfig */,
+				5D27B0EF69AB8101180A8766 /* Pods-Medline-DigitalSkinHealthTests.staging.xcconfig */,
+				12A5137AF6B9411A9982B0B7 /* Pods-Medline-DigitalSkinHealthTests.production.xcconfig */,
+				9444D5EBF6039709F69FF805 /* Pods-Medline-DigitalSkinHealthUITests.development.xcconfig */,
+				4DA548442D3D1EA2CC261BA3 /* Pods-Medline-DigitalSkinHealthUITests.staging.xcconfig */,
+				96F81E04DBBB1474E6417EFE /* Pods-Medline-DigitalSkinHealthUITests.production.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		100DFC5225C5B56A004C7F12 /* Medline-DigitalSkinHealth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 100DFC8025C5B56B004C7F12 /* Build configuration list for PBXNativeTarget "Medline-DigitalSkinHealth" */;
+			buildPhases = (
+				2585979D8012621754F4298D /* [CP] Check Pods Manifest.lock */,
+				100DFC4F25C5B56A004C7F12 /* Sources */,
+				100DFC5025C5B56A004C7F12 /* Frameworks */,
+				100DFC5125C5B56A004C7F12 /* Resources */,
+				1F3E367BBB68CE338EBFFADE /* [CP] Embed Pods Frameworks */,
+				9B6C525C25D51C1D0009E764 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Medline-DigitalSkinHealth";
+			productName = "Medline-DigitalSkinHealth";
+			productReference = 100DFC5325C5B56A004C7F12 /* Medline-DigitalSkinHealth.app */;
+			productType = "com.apple.product-type.application";
+		};
+		100DFC6B25C5B56B004C7F12 /* Medline-DigitalSkinHealthTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 100DFC8325C5B56B004C7F12 /* Build configuration list for PBXNativeTarget "Medline-DigitalSkinHealthTests" */;
+			buildPhases = (
+				5604A2D175B08EF5B826C519 /* [CP] Check Pods Manifest.lock */,
+				100DFC6825C5B56B004C7F12 /* Sources */,
+				100DFC6925C5B56B004C7F12 /* Frameworks */,
+				100DFC6A25C5B56B004C7F12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				100DFC6E25C5B56B004C7F12 /* PBXTargetDependency */,
+			);
+			name = "Medline-DigitalSkinHealthTests";
+			productName = "Medline-DigitalSkinHealthTests";
+			productReference = 100DFC6C25C5B56B004C7F12 /* Medline-DigitalSkinHealthTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		100DFC7625C5B56B004C7F12 /* Medline-DigitalSkinHealthUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 100DFC8625C5B56B004C7F12 /* Build configuration list for PBXNativeTarget "Medline-DigitalSkinHealthUITests" */;
+			buildPhases = (
+				C5E6303AFB1E6E39FFB13208 /* [CP] Check Pods Manifest.lock */,
+				100DFC7325C5B56B004C7F12 /* Sources */,
+				100DFC7425C5B56B004C7F12 /* Frameworks */,
+				100DFC7525C5B56B004C7F12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				100DFC7925C5B56B004C7F12 /* PBXTargetDependency */,
+			);
+			name = "Medline-DigitalSkinHealthUITests";
+			productName = "Medline-DigitalSkinHealthUITests";
+			productReference = 100DFC7725C5B56B004C7F12 /* Medline-DigitalSkinHealthUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		100DFC4B25C5B56A004C7F12 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					100DFC5225C5B56A004C7F12 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					100DFC6B25C5B56B004C7F12 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 100DFC5225C5B56A004C7F12;
+					};
+					100DFC7625C5B56B004C7F12 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 100DFC5225C5B56A004C7F12;
+					};
+				};
+			};
+			buildConfigurationList = 100DFC4E25C5B56A004C7F12 /* Build configuration list for PBXProject "Medline-DigitalSkinHealth" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 100DFC4A25C5B56A004C7F12;
+			productRefGroup = 100DFC5425C5B56A004C7F12 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				100DFC5225C5B56A004C7F12 /* Medline-DigitalSkinHealth */,
+				100DFC6B25C5B56B004C7F12 /* Medline-DigitalSkinHealthTests */,
+				100DFC7625C5B56B004C7F12 /* Medline-DigitalSkinHealthUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		100DFC5125C5B56A004C7F12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BB20DDA2600CAB600C83527 /* splashBgMain.png in Resources */,
+				9BB20DDB2600CAB600C83527 /* splashBgMain@2x.png in Resources */,
+				9BB20DDC2600CAB600C83527 /* splashBgMain@3x.png in Resources */,
+				100DFC6625C5B56B004C7F12 /* LaunchScreen.storyboard in Resources */,
+				103A663225E52E06004BF88F /* Glober-Bold.otf in Resources */,
+				46E63BC025E088E900537F59 /* Glober-Thin.otf in Resources */,
+				46E63B9725E0868E00537F59 /* OpenSans-Regular.ttf in Resources */,
+				103A663125E52E06004BF88F /* Glober-Regular.otf in Resources */,
+				000D7EFB25E91FBA00BBE2A8 /* Main_iPad.storyboard in Resources */,
+				46E63BA025E0868E00537F59 /* OpenSans-LightItalic.ttf in Resources */,
+				46E63BA925E0868E00537F59 /* OpenSans-Bold.ttf in Resources */,
+				004F2F3A25D5234A005CAA8F /* MedlineImageSliderCollectionViewCell.xib in Resources */,
+				46E63BA625E0868E00537F59 /* OpenSans-SemiBold.ttf in Resources */,
+				46E63BAC25E0868E00537F59 /* OpenSans-Light.ttf in Resources */,
+				46E63BBD25E088E900537F59 /* Glober-SemiBold.otf in Resources */,
+				9BB2108226026B3600C83527 /* iPadSplashBgMain@1x.png in Resources */,
+				104A5F1225CBE5D700AA4670 /* Localizable.strings in Resources */,
+				1087A60F25C98A8D00AB45DD /* GoogleService-Info.plist in Resources */,
+				100DFC6325C5B56B004C7F12 /* Assets.xcassets in Resources */,
+				103A3AF725F2812B000F9C9F /* MedlineErrorText.xib in Resources */,
+				46E63BAF25E0868E00537F59 /* OpenSans-ExtraBold.ttf in Resources */,
+				004802D925ECF38D00D04161 /* MedlinePasswordValidationView_iPad.xib in Resources */,
+				000D7F0025E91FDB00BBE2A8 /* LaunchScreen_iPad.storyboard in Resources */,
+				103A663325E52E06004BF88F /* Glober-ExtraBold.otf in Resources */,
+				00B4B07E25FB6CF000C3E528 /* MedlineLoginResponseData.json in Resources */,
+				46E63B9A25E0868E00537F59 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				46E63BB225E0868E00537F59 /* OpenSans-Italic.ttf in Resources */,
+				46E63BA325E0868E00537F59 /* OpenSans-SemiBoldItalic.ttf in Resources */,
+				46E63B9D25E0868E00537F59 /* OpenSans-BoldItalic.ttf in Resources */,
+				103A662725E529EF004BF88F /* Color.xcassets in Resources */,
+				9BB2108126026B3600C83527 /* iPadSplashBgMain@3x.png in Resources */,
+				000D7EF125E8D9AC00BBE2A8 /* MedlinePasswordValidationView.xib in Resources */,
+				9BB2108026026B3600C83527 /* iPadSplashBgMain@2x.png in Resources */,
+				100DFC5E25C5B56A004C7F12 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100DFC6A25C5B56B004C7F12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46E63B9E25E0868E00537F59 /* OpenSans-BoldItalic.ttf in Resources */,
+				46E63BAA25E0868E00537F59 /* OpenSans-Bold.ttf in Resources */,
+				46E63BB025E0868E00537F59 /* OpenSans-ExtraBold.ttf in Resources */,
+				46E63BB325E0868E00537F59 /* OpenSans-Italic.ttf in Resources */,
+				46E63BAD25E0868E00537F59 /* OpenSans-Light.ttf in Resources */,
+				46E63BC125E088E900537F59 /* Glober-Thin.otf in Resources */,
+				46E63B9825E0868E00537F59 /* OpenSans-Regular.ttf in Resources */,
+				46E63BA125E0868E00537F59 /* OpenSans-LightItalic.ttf in Resources */,
+				46E63BBE25E088E900537F59 /* Glober-SemiBold.otf in Resources */,
+				46E63B9B25E0868E00537F59 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				46E63BA725E0868E00537F59 /* OpenSans-SemiBold.ttf in Resources */,
+				46E63BA425E0868E00537F59 /* OpenSans-SemiBoldItalic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100DFC7525C5B56B004C7F12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46E63B9F25E0868E00537F59 /* OpenSans-BoldItalic.ttf in Resources */,
+				46E63BAB25E0868E00537F59 /* OpenSans-Bold.ttf in Resources */,
+				46E63BB125E0868E00537F59 /* OpenSans-ExtraBold.ttf in Resources */,
+				46E63BB425E0868E00537F59 /* OpenSans-Italic.ttf in Resources */,
+				46E63BAE25E0868E00537F59 /* OpenSans-Light.ttf in Resources */,
+				46E63BC225E088E900537F59 /* Glober-Thin.otf in Resources */,
+				46E63B9925E0868E00537F59 /* OpenSans-Regular.ttf in Resources */,
+				46E63BA225E0868E00537F59 /* OpenSans-LightItalic.ttf in Resources */,
+				46E63BBF25E088E900537F59 /* Glober-SemiBold.otf in Resources */,
+				46E63B9C25E0868E00537F59 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				46E63BA825E0868E00537F59 /* OpenSans-SemiBold.ttf in Resources */,
+				46E63BA525E0868E00537F59 /* OpenSans-SemiBoldItalic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1F3E367BBB68CE338EBFFADE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Medline-DigitalSkinHealth/Pods-Medline-DigitalSkinHealth-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Medline-DigitalSkinHealth/Pods-Medline-DigitalSkinHealth-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Medline-DigitalSkinHealth/Pods-Medline-DigitalSkinHealth-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2585979D8012621754F4298D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Medline-DigitalSkinHealth-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5604A2D175B08EF5B826C519 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Medline-DigitalSkinHealthTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B6C525C25D51C1D0009E764 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/Run\"\n";
+		};
+		C5E6303AFB1E6E39FFB13208 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Medline-DigitalSkinHealthUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		100DFC4F25C5B56A004C7F12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100DFD4125C8796F004C7F12 /* MedlineCommon.swift in Sources */,
+				4679861B25F73BED002619A1 /* MedlineResetPasswordRequest.swift in Sources */,
+				103A3AF825F2812B000F9C9F /* MedlineErrorText.swift in Sources */,
+				000D7EF625E8DA0100BBE2A8 /* MedlinePasswordValidationView.swift in Sources */,
+				100DFCCD25C7CACE004C7F12 /* MedlineServiceManager.swift in Sources */,
+				8A0CB1A525F7AD1000F75E02 /* MedlineForgotPasswordResponse.swift in Sources */,
+				46E63D8A25E3D1DE00537F59 /* MedlineWebContentViewController.swift in Sources */,
+				004F2F0925D51D39005CAA8F /* MedlineButton.swift in Sources */,
+				46E63D9025E3D1DE00537F59 /* MedlineFullScreenMessageViewController.swift in Sources */,
+				8A0CB1AA25F7AD2300F75E02 /* MedlineForgotPasswordViewModel.swift in Sources */,
+				10DBD1E025DAC37800FD34AB /* Environment.swift in Sources */,
+				4679862225F74201002619A1 /* MedlineResetPasswordResponse.swift in Sources */,
+				10F6920625D4335E00FBDB40 /* MedlineBaseViewController.swift in Sources */,
+				100DFC6125C5B56A004C7F12 /* Medline_DigitalSkinHealth.xcdatamodeld in Sources */,
+				4679862925F74586002619A1 /* MedlineResetPasswordViewModel.swift in Sources */,
+				46E63B5425E0215D00537F59 /* MedlineKeychainData.swift in Sources */,
+				100DFCEB25C7CCAE004C7F12 /* String+Extension.swift in Sources */,
+				46E63D8D25E3D1DE00537F59 /* MedlineForgotPasswordViewController.swift in Sources */,
+				100DFC9525C5B97D004C7F12 /* MedlineAppConstant.swift in Sources */,
+				004F2F0A25D51D39005CAA8F /* MedlineLabel.swift in Sources */,
+				10F691F325D1A5F700FBDB40 /* MedlineRegisterViewModel.swift in Sources */,
+				8A0CB1A025F7AD0700F75E02 /* MedlineForgotPasswordRequest.swift in Sources */,
+				001E976025F79EC6009C616B /* MedlineLoginRequest.swift in Sources */,
+				46E63D7E25E3D1DE00537F59 /* MedlineResetPasswordViewController.swift in Sources */,
+				100DFC9B25C5B998004C7F12 /* MedlineLoginViewModel.swift in Sources */,
+				100DFD0B25C7D352004C7F12 /* MedlineAuthServiceManager.swift in Sources */,
+				46E63D8125E3D1DE00537F59 /* MedlineLoginViewController.swift in Sources */,
+				001E976525F79ED5009C616B /* MedlineLoginResponse.swift in Sources */,
+				1027B84225F632680011F602 /* MedlineRegisterResponse.swift in Sources */,
+				005A3DB625FFAAA000534EB2 /* MedlineHomeViewController.swift in Sources */,
+				100DFC5725C5B56A004C7F12 /* AppDelegate.swift in Sources */,
+				1027B83525F6322F0011F602 /* MedlineRegisterRequest.swift in Sources */,
+				004F2F0725D51D39005CAA8F /* MedlineTextField.swift in Sources */,
+				100DFC5925C5B56A004C7F12 /* SceneDelegate.swift in Sources */,
+				1037A07C25E97F91008AAC31 /* UILabel+Extension.swift in Sources */,
+				100DFC9625C5B97D004C7F12 /* MedlineServiceConstant.swift in Sources */,
+				46E63D8725E3D1DE00537F59 /* MedlineRegisterAccountViewController.swift in Sources */,
+				1027B8F225F753450011F602 /* MedlineErrorManager.swift in Sources */,
+				004F2EFE25D51CEC005CAA8F /* MedlineDeviceInformation.swift in Sources */,
+				10013EF325EE262200106C5A /* UIView+Extension.swift in Sources */,
+				9B7F1A0725DFF39100A153CE /* UIApplication+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100DFC6825C5B56B004C7F12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100DFC7125C5B56B004C7F12 /* Medline_DigitalSkinHealthTests.swift in Sources */,
+				466EF7C725F7CBC60028B3FB /* MedlineResetPasswordTests.swift in Sources */,
+				8A0CB26B25F889E700F75E02 /* MedlineForgotPasswordTests.swift in Sources */,
+				46CFF81825F91E5A00357C6F /* MedlineFullScreenMessageViewTests.swift in Sources */,
+				101E4E5125FA0495004C4B4E /* MedlineWebViewControllerTests.swift in Sources */,
+				001E977525F7B199009C616B /* MedlineLoginTests.swift in Sources */,
+				005A3DC125FFB6D700534EB2 /* MedlineHomeScreenTests.swift in Sources */,
+				1027BA4B25F7F1ED0011F602 /* MedlineBaseViewControllerTests.swift in Sources */,
+				1027BA2625F7C5C10011F602 /* MedlineRegisterModuleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100DFC7325C5B56B004C7F12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100DFC7C25C5B56B004C7F12 /* Medline_DigitalSkinHealthUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		100DFC6E25C5B56B004C7F12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 100DFC5225C5B56A004C7F12 /* Medline-DigitalSkinHealth */;
+			targetProxy = 100DFC6D25C5B56B004C7F12 /* PBXContainerItemProxy */;
+		};
+		100DFC7925C5B56B004C7F12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 100DFC5225C5B56A004C7F12 /* Medline-DigitalSkinHealth */;
+			targetProxy = 100DFC7825C5B56B004C7F12 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		100DFC5C25C5B56A004C7F12 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				100DFC5D25C5B56A004C7F12 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		100DFC6425C5B56B004C7F12 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				100DFC6525C5B56B004C7F12 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		100DFC7E25C5B56B004C7F12 /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10DBD1E725DAC3A900FD34AB /* Development.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Development;
+		};
+		100DFC7F25C5B56B004C7F12 /* Production */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10DBD1E925DAC3CA00FD34AB /* Production.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Production;
+		};
+		100DFC8125C5B56B004C7F12 /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10DBD1E725DAC3A900FD34AB /* Development.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = VJN4EB6PTB;
+				INFOPLIST_FILE = "Medline-DigitalSkinHealth/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IS_LOGGING_ENABLED = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				PRODUCT_BUNDLE_IDENTIFIER = com.photon.medline;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Medline Appstore Profile";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Development;
+		};
+		100DFC8225C5B56B004C7F12 /* Production */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10DBD1E925DAC3CA00FD34AB /* Production.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = VJN4EB6PTB;
+				INFOPLIST_FILE = "Medline-DigitalSkinHealth/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.photon.medline;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Medline Appstore Profile";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Production;
+		};
+		100DFC8425C5B56B004C7F12 /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4B05018F2C139BBE129132E /* Pods-Medline-DigitalSkinHealthTests.development.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Medline-DigitalSkinHealthTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Photon.Medline-DigitalSkinHealthTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Medline-DigitalSkinHealth.app/Medline-DigitalSkinHealth";
+			};
+			name = Development;
+		};
+		100DFC8525C5B56B004C7F12 /* Production */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12A5137AF6B9411A9982B0B7 /* Pods-Medline-DigitalSkinHealthTests.production.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Medline-DigitalSkinHealthTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Photon.Medline-DigitalSkinHealthTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Medline-DigitalSkinHealth.app/Medline-DigitalSkinHealth";
+			};
+			name = Production;
+		};
+		100DFC8725C5B56B004C7F12 /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9444D5EBF6039709F69FF805 /* Pods-Medline-DigitalSkinHealthUITests.development.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Medline-DigitalSkinHealthUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Photon.Medline-DigitalSkinHealthUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Medline-DigitalSkinHealth";
+			};
+			name = Development;
+		};
+		100DFC8825C5B56B004C7F12 /* Production */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96F81E04DBBB1474E6417EFE /* Pods-Medline-DigitalSkinHealthUITests.production.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Medline-DigitalSkinHealthUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Photon.Medline-DigitalSkinHealthUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Medline-DigitalSkinHealth";
+			};
+			name = Production;
+		};
+		10DBD1D725DAC27B00FD34AB /* Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10DBD1E825DAC3B500FD34AB /* Staging.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Staging;
+		};
+		10DBD1D825DAC27B00FD34AB /* Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10DBD1E825DAC3B500FD34AB /* Staging.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = VJN4EB6PTB;
+				INFOPLIST_FILE = "Medline-DigitalSkinHealth/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				PRODUCT_BUNDLE_IDENTIFIER = com.photon.medline;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Medline Appstore Profile";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Staging;
+		};
+		10DBD1D925DAC27B00FD34AB /* Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D27B0EF69AB8101180A8766 /* Pods-Medline-DigitalSkinHealthTests.staging.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Medline-DigitalSkinHealthTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Photon.Medline-DigitalSkinHealthTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Medline-DigitalSkinHealth.app/Medline-DigitalSkinHealth";
+			};
+			name = Staging;
+		};
+		10DBD1DA25DAC27B00FD34AB /* Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DA548442D3D1EA2CC261BA3 /* Pods-Medline-DigitalSkinHealthUITests.staging.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Medline-DigitalSkinHealthUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Photon.Medline-DigitalSkinHealthUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Medline-DigitalSkinHealth";
+			};
+			name = Staging;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		100DFC4E25C5B56A004C7F12 /* Build configuration list for PBXProject "Medline-DigitalSkinHealth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100DFC7E25C5B56B004C7F12 /* Development */,
+				10DBD1D725DAC27B00FD34AB /* Staging */,
+				100DFC7F25C5B56B004C7F12 /* Production */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Production;
+		};
+		100DFC8025C5B56B004C7F12 /* Build configuration list for PBXNativeTarget "Medline-DigitalSkinHealth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100DFC8125C5B56B004C7F12 /* Development */,
+				10DBD1D825DAC27B00FD34AB /* Staging */,
+				100DFC8225C5B56B004C7F12 /* Production */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Production;
+		};
+		100DFC8325C5B56B004C7F12 /* Build configuration list for PBXNativeTarget "Medline-DigitalSkinHealthTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100DFC8425C5B56B004C7F12 /* Development */,
+				10DBD1D925DAC27B00FD34AB /* Staging */,
+				100DFC8525C5B56B004C7F12 /* Production */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Production;
+		};
+		100DFC8625C5B56B004C7F12 /* Build configuration list for PBXNativeTarget "Medline-DigitalSkinHealthUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100DFC8725C5B56B004C7F12 /* Development */,
+				10DBD1DA25DAC27B00FD34AB /* Staging */,
+				100DFC8825C5B56B004C7F12 /* Production */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Production;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		100DFC5F25C5B56A004C7F12 /* Medline_DigitalSkinHealth.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				100DFC6025C5B56A004C7F12 /* Medline_DigitalSkinHealth.xcdatamodel */,
+			);
+			currentVersion = 100DFC6025C5B56A004C7F12 /* Medline_DigitalSkinHealth.xcdatamodel */;
+			path = Medline_DigitalSkinHealth.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 100DFC4B25C5B56A004C7F12 /* Project object */;
+}

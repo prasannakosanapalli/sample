@@ -1,0 +1,9 @@
+{
+   "VersionData":{
+      "StoreVersion":"1.0.3",
+      "Title":"Mandatory App Update",
+      "messege":"In order to continue, you update the app now. This should only take a few moments.",
+      "iosAppLink":"https://apps.apple.com/us/app/xcode/id497799835?mt=12",
+      "Isforceupdate":false
+   }
+}
