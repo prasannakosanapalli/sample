@@ -1,0 +1,102 @@
+<resources>
+    <string name="app_name">Medline Health</string>
+    <string name="confirm_password">Confirm Password *</string>
+    <string name="register">Register</string>
+    <string name="register_acc">Register your account</string>
+    <string name="first_name">First Name *</string>
+    <string name="last_name">Last Name *</string>
+    <string name="customer_no">Customer Number *</string>
+    <string name="phone_no">Phone Number *</string>
+    <string name="phone_no_error">Please enter valid phone no</string>
+    <string name="first_name_error">Please Enter valid First Name</string>
+    <string name="last_name_error">Please Enter valid Last Name</string>
+    <string name="customer_error">Invalid customer number</string>
+    <string name="confirm_password_error">Password doesn’t match</string>
+    <string name="password_error">Please Enter valid Password</string>
+    <string name="internet">Check your internet connection</string>
+    <string name="newPasswordConfirmPasswordNotMatch">Password does not match</string>
+    <string name="hint_username">Email *</string>
+    <string name="hint_password">Password *</string>
+    <!--SignUp Screen-->
+    <string name="register_acc1">Already have an account? Login</string>
+    <string name="logins">Login</string>
+    <string name="strterms">Terms &amp; Conditions</string>
+    <string name="str_privacy_policy">Privacy Policy</string>
+    <string name="enablePrivacyTermAndCondition">Please enable the Privacy policy and terms &amp; conditions</string>
+    <string name="plusone">+1</string>
+    <string name="terms">By signing up or creating an account you agree to the Privacy Policy and Terms &amp; Conditions</string>
+    <string name="registration_success">Please check your email for activation link</string>
+    <string name="congratulations">Congratulations!</string>
+    <!--Login with the Pin-->
+    <!-- Login Screen Strings -->
+    <string name="welcome">Welcome Back,</string>
+    <string name="continue_message">Sign in to continue</string>
+    <string name="hint_email"> Email *</string>
+    <string name="hint_pwd">Password *</string>
+    <string name="pwd_error">Incorrect password. Try again</string>
+    <string name="email_error">Account not found associated with this email</string>
+    <string name="forget_password_button">Forgot Password?</string>
+    <string name="login_title">Login</string>
+    <string name="title_home">Home</string>
+    <string name="title_formulary">Formulary</string>
+    <string name="title_findcare">Find care</string>
+    <string name="title_feedback">Feedback</string>
+    <string name="title_hotline">Hotline</string>
+    <string name="searchHint">Search wound &amp; skincare products</string>
+    <string name="greetingText">Hi Nancy, what can you help with?</string>
+    <string name="quoteAnORPad">Quote an OR Pad</string>
+    <string name="woundMeasure">Wound Measure</string>
+    <string name="miniNutritionalAssesment">Mini Nutritional Assessment</string>
+    <string name="malNutritionScreeningTools">Malnutrition Screening Tools</string>
+    <string name="impactofmalnutrition">Impact of malnutrition</string>
+    <string name="protienNeedsCalculator">Protien needs Calculator</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="title_reset_password">Reset Password</string>
+    <string name="enternewpassword">Enter a new password</string>
+    <string name="entervalidPassword">Enter valid Password</string>
+    <string name="newPassword">New Password *</string>
+    <string name="minimumeightChar">8 characters minimum</string>
+    <string name="oneSpecialCaharcter">One special character</string>
+    <string name="oneNumber">One number</string>
+    <string name="oneUpperCase">One upper case</string>
+    <string name="confirmPassword">Confirm Password *</string>
+    <string name="permission_title">Permission Required</string>
+    <string name="permission_msg">You have forcefully denied some of the required permission for the action.Please open settings, go to permission and allow them</string>
+    <string name="setting">Setting</string>
+    <string name="cancel">Cancel</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="continueUsing">Continue using</string>
+    <string name="succcess">Succcess</string>
+    <!-- Forgot Password Screen-->
+    <string name="title_forget_password">Forgot Password</string>
+    <string name="text_forget_password">Please provide your email address</string>
+    <string name="submit">Submit</string>
+    <string name="mailsent">Please check your email to reset your password</string>
+    <string name="continue_to_login">Continue to Login</string>
+    <string name="yourpasswordhasbeenchanged">Your password has been changed! </string>
+    <string name="digit">1234567890( )-</string>
+    <string name="great">Great</string>
+    <!--FCM and In-app messaging-->
+    <string name="str_test_fcm">Test FCM and In App Messaging</string>
+    <string name="host_name_deepliniking">https://devdshpapiservice.azure-api.net</string>
+    <string name="userActivation">useractivation</string>
+    <string name="privacypolicy_termand_condition">Privacy Policy - Medline skin health.</string>
+    <string name="termand_condition">Term &amp; Condition - Medline skin health.</string>
+    <string name="privacypolicy_text"><b>Our Privacy Policy Has Recently Changed</b><font color="#333333"> as of June 24, 2020.</font></string>
+    <string name="term_condition_text"><b>Our Term &amp; Condition Has Recently Changed</b><font color="#333333"> as of June 24, 2020.</font></string>
+    <string name="privacy_description">The privacy and security of your information is very important to us.
+        We have made material changes to the Privacy Policy that apply with respect to information that you
+        provide on or after the date indicated above.  These changes include: \n \n
+        <font color="#333333"><b>1) </b></font>Detailed information regarding what Personal Data and other information we collect from you, how we collect it, and how it is used; \n
+        <font color="#333333"><b>2) </b></font> Further descriptions of the parties with whom and for what purposes your data is shared; and \n
+        <font color="#333333"><b>3) </b></font> What rights you have regarding your Personal Data.To learn more, please review the full Privacy Policy below.\n \n
+        Data Subject Requests can be submitted at MedlinePrivacy.ZenDesk.com</string>
+    <string name="medlineprivacy_zendesk_com">MedlinePrivacy.ZenDesk.com</string>
+    <string name="table_of_contents">Table of Contents</string>
+    <string name="introduction">Introduction</string>
+    <string name="personaldata">What Personal Data do we collect and use?</string>
+    <string name="collect_data">How do we collect your Personal Data?</string>
+    <string name="your_personal_data">How do we use your Personal Data?</string>
+    <string name="seeAllMessage">"See All text is tapped "</string>
+</resources>

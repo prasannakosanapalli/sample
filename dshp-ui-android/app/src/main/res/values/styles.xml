@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MedLine.Text" parent="TextAppearance.AppCompat">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textSize">@dimen/_14sp</item>
+    </style>
+
+    <style name="MedLine.Text.Glober.Bold" parent="MedLine.Text">
+        <item name="android:fontFamily">@font/globerbold</item>
+    </style>
+
+    <style name="MedLine.Text.Glober.SemiBold" parent="MedLine.Text">
+        <item name="android:fontFamily">@font/globerbold</item>
+    </style>
+
+    <style name="MedLine.Text.OpenSans.Regular" parent="MedLine.Text">
+        <item name="android:fontFamily">@font/opensansregular</item>
+    </style>
+
+    <style name="MedLine.Text.OpenSans.Bold" parent="MedLine.Text">
+        <item name="android:fontFamily">@font/opensansbold</item>
+    </style>
+
+    <style name="wdt_search" parent="MedLine.Text.OpenSans.Regular">
+        <item name="android:paddingStart">@dimen/_20dp</item>
+        <item name="android:drawablePadding">@dimen/_20dp</item>
+        <item name="android:background">@drawable/corner_ractangle</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/_14sp</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:hint">@string/searchHint</item>
+    </style>
+
+    <style name="dashboardGreetingText" parent="MedLine.Text.Glober.SemiBold">
+        <item name="android:layout_marginStart">@dimen/_20dp</item>
+        <item name="android:layout_marginTop">@dimen/_12dp</item>
+        <item name="android:layout_marginEnd">@dimen/_20dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/greetingText</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/_18sp</item>
+    </style>
+
+    <style name="chipText" parent="MedLine.Text.Glober.SemiBold">
+        <item name="android:textSize">@dimen/_14sp</item>
+    </style>
+
+    <style name="productNameText" parent="MedLine.Text.Glober.Bold">
+        <item name="android:textSize">@dimen/_14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

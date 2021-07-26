@@ -1,0 +1,27 @@
+/*
+ * Copyright 2020 DD IP Holder, LLC.
+ *
+ */
+
+ext {
+    jacocoIgnoreList = [
+    ]
+
+    androidFilter =  [
+            '**/R.class',
+            '*/R$.class',
+            '*/*$ViewInjector.*',
+            '*/BuildConfig.',
+            '*/Manifest.*',
+            '*/*Test.*',
+            'android/**/*.*',
+            '*/*Fragment.',
+            '*/*Activity.'
+    ]
+
+    librariesFilter = ['**/com/crashlytics/**/*.*',
+                           '**/com/viewpagerindicator/**/*.*',
+                           '**/io/fabric/**/*.*',
+                           '**/io/reactivex/**/*.*',
+                           '**/squareup/**/*.*',]
+}

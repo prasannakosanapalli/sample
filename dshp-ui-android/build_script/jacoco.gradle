@@ -1,0 +1,148 @@
+/*
+ * Copyright 2020 DD IP Holder, LLC.
+ */
+
+apply plugin: 'jacoco'
+apply from: '../build_script/ignore-list.gradle'
+jacoco {
+    toolVersion = "0.8.5"
+}
+
+private static boolean isAndroidModule(Project project) {
+    boolean isAndroidLibrary = project.plugins.hasPlugin('com.android.library')
+    boolean isAndroidApp = project.plugins.hasPlugin('com.android.application')
+    return isAndroidLibrary || isAndroidApp
+}
+
+afterEvaluate { project ->
+    def ignoreList = jacocoIgnoreList
+    def projectName = project.name
+    if (ignoreList.contains(projectName)) {
+        println "Jacoco: ignoring project ${projectName}"
+        return false
+    }
+    if (isAndroidModule(project)) setupAndroidReporting()
+    else setupKotlinReporting()
+}
+
+def setupKotlinReporting() {
+    jacocoTestReport {
+        dependsOn test
+        reports {
+            csv.enabled false // change if needed
+            xml {
+                enabled true
+                destination file("${buildDir}/reports/jacoco.xml")
+            }
+            html {
+                enabled true
+                destination file("${buildDir}/reports/coverage")
+            }
+        }
+    }
+}
+
+def setupAndroidReporting() {
+    tasks.withType(Test) {
+        // Whether or not classes without source location should be instrumented
+        jacoco.includeNoLocationClasses true
+    }
+
+    project.gradle.taskGraph.whenReady {
+        connectedDebugAndroidTest {
+            ignoreFailures = true
+        }
+    }
+
+    android.applicationVariants.all { variant ->
+        def variantName = variant.name
+        def testTaskName = "test${variantName.capitalize()}UnitTest"
+        def testTaskReportName = "create${variantName.capitalize()}CoverageReport"
+
+        tasks.create(name: "jacoco${variantName.capitalize()}TestReport", type: JacocoReport, dependsOn: ["$testTaskName", "$testTaskReportName"]) {
+            // task implementation here ...
+            group = "Reporting"
+            description = "Generate Jacoco coverage reports for Debug build"
+
+
+            reports {
+                xml.enabled = true
+                html.enabled = true
+                //to create coverage report in html
+                html.destination file("${buildDir}/reports/coverage")
+                //for XML
+                xml.destination file("${buildDir}/reports/jacoco.xml")
+            }
+            // what to exclude from coverage report
+            // UI, "noise", generated classes, platform classes, etc.
+            def excludes = [
+                    '**/R.class',
+                    '*/R$.class',
+                    '*/*$ViewInjector.*',
+                    '*/BuildConfig.',
+                    '*/Manifest.*',
+                    '*/*Test.*',
+                    'android/**/*.*',
+                    '*/*Fragment.',
+                    '*/*Activity.'
+            ]
+            // generated classes
+            classDirectories.setFrom fileTree(
+                    dir: "$buildDir/intermediates/javac/${variantName.capitalize()}/compileDebugJavaWithJavac/classes",
+                    excludes: excludes
+            ) + fileTree(
+                    dir: "$buildDir/tmp/kotlin-classes/debug",
+                    excludes: excludes
+            )
+
+            // sources
+            sourceDirectories.setFrom files([
+                    android.sourceSets.main.java.srcDirs,
+                    "src/main/kotlin"
+            ])
+            executionData.setFrom fileTree(dir: buildDir, includes: [
+                    '*/.exec', '*/.ec'])
+        }
+    }
+
+
+    task generateMergedReport(type: JacocoReport) {
+        dependsOn = subprojects.test
+        // what to exclude from coverage report
+        // UI, "noise", generated classes, platform classes, etc.
+        def excludes = [
+                '**/R.class',
+                '*/R$.class',
+                '*/*$ViewInjector.*',
+                '*/BuildConfig.',
+                '*/Manifest.*',
+                '*/*Test.*',
+                'android/**/*.*',
+                '*/*Fragment.',
+                '*/*Activity.'
+        ]
+        sourceDirectories.setFrom files([
+                android.sourceSets.main.java.srcDirs,
+                "src/main/java"
+        ])
+        classDirectories.setFrom fileTree(
+                dir: "$buildDir/intermediates/javac/debug/classes/com/photon/medline",
+                excludes: excludes
+        ) + fileTree(
+                dir: "$buildDir/tmp/kotlin-classes/debug",
+                excludes: excludes
+        )
+        executionData.setFrom fileTree(dir: buildDir, includes: [
+                '**/*.exec', '**/*.ec'])
+        reports {
+            xml.enabled true
+            csv.enabled false
+            html.enabled true
+            //to create coverage report in html
+            html.destination file("${buildDir}/reports/coverage")
+            //for XML
+            xml.destination file("${buildDir}/reports/jacoco.xml")
+
+        }
+    }
+}

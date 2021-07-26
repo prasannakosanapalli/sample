@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "3953772554141",
+    "project_id": "medline-digitalskinhealt-594b6-1",
+    "storage_bucket": "medline-digitalskinhealt-594b6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:395377255414:android:27fe20fac2d4d1072a9dd7",
+        "android_client_info": {
+          "package_name": "com.photon.medline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "395377255414-th3a13abos3qg1l2dm96ulrpcglho12r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYXjHh1lYOJuhYv_eR_9mYltGVB32GcLo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "395377255414-th3a13abos3qg1l2dm96ulrpcglho12r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "395377255414-mu0ckof7q7ob18qg4hfche3nkucu6ea3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.photon.medline"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

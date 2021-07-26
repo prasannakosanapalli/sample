@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.photon.medline.epicModules.dashboard.home.HomeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/_20dp"
+        android:paddingEnd="@dimen/_20dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_title"
+            style="@style/MedLine.Text.Glober.Bold"
+            android:paddingTop="@dimen/_16dp"
+            android:paddingEnd="@dimen/_16dp"
+            android:paddingBottom="@dimen/_16dp"
+            android:text="Explore"
+            android:textSize="@dimen/_18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_see_all"
+            style="@style/MedLine.Text.Glober.Bold"
+            android:background="?attr/selectableItemBackground"
+            android:paddingStart="@dimen/_16dp"
+            android:paddingTop="@dimen/_16dp"
+            android:paddingBottom="@dimen/_16dp"
+            android:text="See All"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_chip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title"
+            bind:itemCount="8"
+            bind:listitem="@layout/item_chipper_filter" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_sub_category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_chip"
+            app:spanCount="2"
+            bind:itemCount="8"
+            bind:listitem="@layout/item_sub_category" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

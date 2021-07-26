@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="utf-8"?><!--It's layout design for user registration screen for tablets-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="signupviewmodel"
+            type="com.photon.medline.epicModules.authentication.signup.ui.SignUpViewModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        bind:ignore="MissingConstraints">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_46dp"
+            android:layout_marginEnd="@dimen/_46dp"
+            android:fillViewport="true"
+            bind:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_50dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_76dp">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_65dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/img_back"
+                                android:layout_width="@dimen/_39dp"
+                                android:layout_height="@dimen/_39dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:onClick="@{()->signupviewmodel.obBackPressed()}"
+                                android:src="@drawable/ic_baseline_arrow_back_24" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/img_app_logo"
+                                android:layout_width="@dimen/_181dp"
+                                android:layout_height="@dimen/_69dp"
+                                android:layout_centerInParent="true"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/header_logo_sm" />
+                        </RelativeLayout>
+
+                    </androidx.appcompat.widget.Toolbar>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/contraint_inside_main"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_154dp"
+                        android:layout_marginTop="@dimen/_70dp"
+                        android:layout_marginEnd="@dimen/_154dp"
+                        android:visibility="@{signupviewmodel.successEmailEnable?View.GONE:View.VISIBLE}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_register_top"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/globerbold"
+                            android:gravity="center_horizontal"
+                            android:text="@string/register_acc"
+                            android:textColor="@color/black_light_gray"
+                            android:textSize="@dimen/_27dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_register_line"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/opensansregular"
+                            android:gravity="center_horizontal"
+                            android:text="@string/register_acc1"
+                            android:textColor="@color/black_light_gray"
+                            android:textSize="@dimen/_20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txt_register_top" />
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edt_first"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_69dp"
+                            android:layout_marginTop="@dimen/_60dp"
+                            android:background="@{signupviewmodel.firstname?@drawable/red_corner_rectangle:@drawable/corner_ractangle}"
+                            android:fontFamily="@font/opensansregular"
+                            android:hint="@string/first_name"
+                            android:nextFocusDown="@+id/edt_last"
+                            android:onTextChanged="@{signupviewmodel::onFirstNameTextChangeListener}"
+                            android:paddingStart="@dimen/_12dp"
+                            android:singleLine="true"
+                            android:textColor="@color/color_333333"
+                            android:textColorHint="@color/gray"
+                            android:textSize="@dimen/_20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txt_register_line" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_firstname_error"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_9dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/opensansregular"
+                            android:text="@string/first_name_error"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/_20dp"
+                            android:visibility="@{signupviewmodel.firstname?View.VISIBLE:View.GONE}"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/edt_first" />
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edt_last"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_69dp"
+                            android:layout_marginTop="@dimen/_15"
+                            android:background="@{signupviewmodel.lastname?@drawable/red_corner_rectangle:@drawable/corner_ractangle}"
+                            android:fontFamily="@font/opensansregular"
+                            android:hint="@string/last_name"
+                            android:nextFocusDown="@+id/edt_custno"
+                            android:onTextChanged="@{signupviewmodel::onLastNameTextChangeListener}"
+                            android:paddingStart="@dimen/_12dp"
+                            android:singleLine="true"
+                            android:textColor="@color/color_333333"
+                            android:textColorHint="@color/gray"
+                            android:textSize="@dimen/_20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txt_firstname_error" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_lastname_error"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_9dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/opensansregular"
+                            android:text="@string/last_name_error"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/_20dp"
+                            android:visibility="@{signupviewmodel.lastname?View.VISIBLE:View.GONE}"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/edt_last" />
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edt_custno"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_69dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/_15"
+                            android:background="@{signupviewmodel.customernumber?@drawable/red_corner_rectangle:@drawable/corner_ractangle}"
+                            android:fontFamily="@font/opensansregular"
+                            android:gravity="center_vertical"
+                            android:hint="@string/customer_no"
+                            android:inputType="number"
+                            android:maxLength="7"
+                            android:nextFocusDown="@+id/edt_pin"
+                            android:onTextChanged="@{signupviewmodel::onCustomerNumberTextChangeListener}"
+                            android:paddingStart="@dimen/_12dp"
+                            android:singleLine="true"
+                            android:textColor="@color/color_333333"
+                            android:textColorHint="@color/gray"
+                            android:textSize="@dimen/_20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txt_lastname_error" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_custno_error"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_9dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/opensansregular"
+                            android:text="@string/customer_error"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/_20dp"
+                            android:visibility="@{signupviewmodel.customernumber?View.VISIBLE:View.GONE}"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/edt_custno" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edt_phone_no"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_69dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_15dp"
+                            android:background="@{signupviewmodel.phone?@drawable/red_corner_rectangle:@drawable/corner_ractangle}"
+                            android:digits="@string/digit"
+                            android:fontFamily="@font/opensansregular"
+                            android:gravity="center_vertical"
+                            android:hint="@string/phone_no"
+                            android:inputType="phone"
+                            android:maxLength="14"
+                            android:nextFocusDown="@+id/edt_email"
+                            android:paddingStart="@dimen/_12dp"
+                            android:singleLine="true"
+                            android:textColor="@color/color_333333"
+                            android:textColorHint="@color/gray"
+                            android:textSize="@dimen/_20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txt_custno_error" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_phone_no"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/edt_phone_no"
+                            android:layout_marginTop="@dimen/_9dp"
+                            android:fontFamily="@font/opensansregular"
+                            android:text="@string/phone_no_error"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/_20dp"
+                            android:visibility="@{signupviewmodel.phone?View.VISIBLE:View.GONE}"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/edt_phone_no" />
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edt_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_69dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/_15dp"
+                            android:background="@{signupviewmodel.email?@drawable/red_corner_rectangle:@drawable/corner_ractangle}"
+                            android:fontFamily="@font/opensansregular"
+                            android:gravity="center_vertical"
+                            android:hint="@string/hint_username"
+                            android:inputType="textEmailAddress"
+                            android:nextFocusDown="@+id/edt_password1"
+                            android:onTextChanged="@{signupviewmodel::onEmailTextChangeListener}"
+                            android:paddingStart="@dimen/_12dp"
+                            android:singleLine="true"
+                            android:textColor="@color/color_333333"
+                            android:textColorHint="@color/gray"
+                            android:textSize="@dimen/_20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txt_phone_no" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_9dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/opensansregular"
+                            android:text="@string/email_error"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/_20dp"
+                            android:visibility="@{signupviewmodel.email?View.VISIBLE:View.GONE}"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/edt_email" />
+
+
+                        <FrameLayout
+                            android:id="@+id/framelayout_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_15dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txt_email">
+
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edt_password1"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_69dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@{signupviewmodel.password?@drawable/red_corner_rectangle:@drawable/corner_ractangle}"
+                                android:fontFamily="@font/opensansregular"
+                                android:gravity="center_vertical"
+                                android:hint="@string/hint_password"
+                                android:inputType="textPassword"
+                                android:nextFocusDown="@+id/edt_cpassword1"
+                                android:onTextChanged="@{signupviewmodel::onPasswordTextChangeListener}"
+                                android:paddingStart="@dimen/_12dp"
+                                android:singleLine="true"
+                                android:textColor="@color/color_333333"
+                                android:textColorHint="@color/gray"
+                                android:textSize="@dimen/_20sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                bind:hideShowText="@{signupviewmodel.hideShowTogglePassword}" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_69dp"
+                                android:layout_gravity="end"
+                                android:onClick="@{()->signupviewmodel.hideShowPasswordClick()}"
+                                android:paddingEnd="@dimen/_16dp"
+                                android:visibility="@{signupviewmodel.passwordVisibility?View.VISIBLE:View.GONE}"
+                                bind:srcCompat="@{signupviewmodel.hideShowTogglePassword?@drawable/toggle_password_eye_dark:@drawable/toggle_password_eye}" />
+
+                        </FrameLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/password_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/framelayout_password">
+
+                            <androidx.constraintlayout.widget.Guideline
+                                android:id="@+id/guideLineCenter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintGuide_percent=".5" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/minimum_eight_character"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_5dp"
+                                android:drawablePadding="@dimen/_5dp"
+                                android:fontFamily="@font/opensansregular"
+                                android:gravity="center_vertical"
+                                android:text="@string/minimumeightChar"
+                                android:textColor="@{signupviewmodel.minimumEightChar?@color/black_light_gray:@color/color_8993a4}"
+                                android:textSize="@dimen/_12dp"
+                                android:textStyle="normal"
+                                app:layout_constraintEnd_toEndOf="@+id/guideLineCenter"
+                                app:layout_constraintStart_toStartOf="parent"
+                                bind:drawableStart="@{signupviewmodel.minimumEightChar?@drawable/ic_baseline_check_box_green:@drawable/ic_baseline_check_box_24}" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/special_charcter"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5dp"
+                                android:drawablePadding="@dimen/_5dp"
+                                android:fontFamily="@font/opensansregular"
+                                android:gravity="center_vertical"
+                                android:text="@string/oneSpecialCaharcter"
+                                android:textColor="@{signupviewmodel.oneSpecialCaharcter?@color/black_light_gray:@color/color_8993a4}"
+                                android:textSize="@dimen/_12dp"
+                                android:textStyle="normal"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="@+id/guideLineCenter"
+                                bind:drawableStart="@{signupviewmodel.oneSpecialCaharcter?@drawable/ic_baseline_check_box_green:@drawable/ic_baseline_check_box_24}" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_6dp"
+                                android:layout_marginEnd="@dimen/_5dp"
+                                android:drawablePadding="@dimen/_5dp"
+                                android:fontFamily="@font/opensansregular"
+                                android:gravity="center_vertical"
+                                android:text="@string/oneNumber"
+                                android:textColor="@{signupviewmodel.oneNumber?@color/black_light_gray:@color/color_8993a4}"
+                                android:textSize="@dimen/_12dp"
+                                android:textStyle="normal"
+                                app:layout_constraintEnd_toEndOf="@+id/guideLineCenter"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/minimum_eight_character"
+                                bind:drawableStart="@{signupviewmodel.oneNumber?@drawable/ic_baseline_check_box_green:@drawable/ic_baseline_check_box_24}" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5dp"
+                                android:layout_marginTop="@dimen/_6dp"
+                                android:drawablePadding="@dimen/_5dp"
+                                android:fontFamily="@font/opensansregular"
+                                android:gravity="center_vertical"
+                                android:text="@string/oneUpperCase"
+                                android:textColor="@{signupviewmodel.oneUpperCase?@color/black_light_gray:@color/color_8993a4}"
+                                android:textSize="@dimen/_12dp"
+                                android:textStyle="normal"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="@+id/guideLineCenter"
+                                app:layout_constraintTop_toBottomOf="@+id/special_charcter"
+                                bind:drawableStart="@{signupviewmodel.oneUpperCase?@drawable/ic_baseline_check_box_green:@drawable/ic_baseline_check_box_24}" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_password1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_9dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/opensansregular"
+                            android:text="@string/password_error"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/_20dp"
+                            android:visibility="@{signupviewmodel.password?View.VISIBLE:View.GONE}"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/password_type" />
+
+                        <FrameLayout
+                            android:id="@+id/framelayout_confirm_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_15dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txt_password1">
+
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edt_cpassword1"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_69dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@{signupviewmodel.confirmPassword?@drawable/red_corner_rectangle:@drawable/corner_ractangle}"
+                                android:fontFamily="@font/opensansregular"
+                                android:gravity="center_vertical"
+                                android:hint="@string/confirm_password"
+                                android:inputType="textPassword"
+                                android:onTextChanged="@{signupviewmodel::onConfirmPasswordTextChangeListener}"
+                                android:paddingStart="@dimen/_12dp"
+                                android:singleLine="true"
+                                android:textColor="@color/color_333333"
+                                android:textColorHint="@color/gray"
+                                android:textSize="@dimen/_20sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                bind:hideShowText="@{signupviewmodel.hideShowToggleConfirmPassword}" />
+
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_69dp"
+                                android:layout_gravity="end"
+                                android:onClick="@{()->signupviewmodel.hideShowConfirmPasswordClick()}"
+                                android:paddingEnd="@dimen/_16dp"
+                                android:visibility="@{signupviewmodel.confirmPasswordVisibility?View.VISIBLE:View.GONE}"
+                                bind:srcCompat="@{signupviewmodel.hideShowToggleConfirmPassword?@drawable/toggle_password_eye_dark:@drawable/toggle_password_eye}" />
+
+                        </FrameLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_cpassword1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_9dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/opensansregular"
+                            android:text="@string/confirm_password_error"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/_20dp"
+                            android:visibility="@{signupviewmodel.confirmPassword?View.VISIBLE:View.GONE}"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/framelayout_confirm_password" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_terms1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="@dimen/_20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txt_cpassword1">
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/check_terms"
+                                android:layout_width="@dimen/_24dp"
+                                android:layout_height="@dimen/_24dp"
+                                android:checked="@={signupviewmodel.privacyPolicyTermCondition}"
+                                android:onClick="@{(view)->signupviewmodel.onClickPrivacyPolicyTermAndCondition(view)}" />
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txt_privacy_term_condition"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_5dp"
+                                android:layout_toEndOf="@+id/check_terms"
+                                android:fontFamily="@font/opensansregular"
+                                android:paddingStart="@dimen/_5dp"
+                                android:textColor="@color/black_light_gray"
+                                android:textSize="@dimen/_16" />
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/constraint_button"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_70dp"
+                            android:layout_marginStart="@dimen/_20dp"
+                            android:layout_marginTop="@dimen/_40dp"
+                            android:layout_marginEnd="@dimen/_20dp"
+                            android:background="@drawable/blue_corner_ractangle"
+                            android:onClick="@{()-> signupviewmodel.onRegiserButtonClick()}"
+                            app:layout_constraintEnd_toEndOf="@+id/rl_terms1"
+                            app:layout_constraintStart_toStartOf="@+id/rl_terms1"
+                            app:layout_constraintTop_toBottomOf="@+id/rl_terms1">
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txt_register"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/opensanssemibold"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="@string/register"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/_23sp" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txt_register"
+                                android:layout_marginTop="@dimen/_50dp" />
+
+
+                        </RelativeLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_200dp"
+            android:layout_marginEnd="@dimen/_200dp"
+            android:visibility="@{signupviewmodel.successEmailEnable?View.VISIBLE:View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/success"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/globerbold"
+                android:gravity="center"
+                android:text="@string/congratulations"
+                android:textColor="@color/color_36b37e"
+                android:textSize="@dimen/_37sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/success_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/opensansregular"
+                android:gravity="center"
+                android:text="@string/registration_success"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_20.6sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/success" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_continue_login"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_78dp"
+                android:layout_marginStart="@dimen/_21dp"
+                android:layout_marginTop="@dimen/_50dp"
+                android:layout_marginEnd="@dimen/_21dp"
+                android:background="@drawable/blue_corner_ractangle"
+                android:fontFamily="@font/opensanssemibold"
+                android:onClick="@{()-> signupviewmodel.onContinueToLoginButtonClick()}"
+                android:text="@string/continue_to_login"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_23sp"
+                app:layout_constraintTop_toBottomOf="@+id/success_message" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

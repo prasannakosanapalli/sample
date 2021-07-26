@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.photon.medline.epicModules.dashboard.home.HomeViewModel" />
+
+        <variable
+            name="data"
+            type="com.photon.medline.epicModules.dashboard.home.model.ProductListModel" />
+
+        <variable
+            name="position"
+            type="Integer" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_product_root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.photon.medline.epicModules.dashboard.home.component.ProductView
+            android:id="@+id/product_view"
+            android:layout_width="@dimen/list_item_height"
+            android:layout_height="@dimen/list_item_height"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:layout_marginBottom="@dimen/_20dp"
+            app:cardCornerRadius="@dimen/_8dp"
+            app:cardElevation="@dimen/_8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#0000ee</color>
+    <color name="lightBlue">#0052cc</color>
+    <color name="red">#de350b</color>
+    <color name="black_light_gray">#333333</color>
+    <color name="gray">#505f79</color>
+    <color name="text_color">#333333</color>
+    <color name="login_btn_color">#0052cc</color>
+    <color name="error_text">#de350b</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_505f79">#505f79</color>
+    <color name="color_de350b">#de350b</color>
+    <color name="color_36b37e">#36b37e</color>
+    <color name="color_04b751">#04b751</color>
+    <color name="color_8993a4">#8993a4</color>
+    <color name="color_dbdbdb">#dbdbdb</color>
+</resources>

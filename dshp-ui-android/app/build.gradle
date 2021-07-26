@@ -1,0 +1,243 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+    id 'kotlin-platform-android'
+    id 'kotlin-allopen'
+    id 'dagger.hilt.android.plugin'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'org.sonarqube'
+}
+apply from: '../build_script/jacoco.gradle'
+allOpen {
+    // allows mocking for classes w/o directly opening them for release builds
+    annotation 'com.photon.medline.testing.OpenClass'
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.photon.medline"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments["dagger.hilt.disableModulesHaveInstallInCheck"] = "true"
+            }
+        }
+        buildConfigField "String", "API_KEY", "\"632f72f7614148fc900dcd209493485c\""
+
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField 'String', 'BASE_URL', "\"https://devdshpapiservice.azure-api.net/Dev-DSHP-API/\""
+            debuggable true
+            testCoverageEnabled true
+            manifestPlaceholders = [hostName: HOST_NAME_DEV]
+        }
+        release {
+            buildConfigField "String", "BASE_URL", "\"https://devdshpapiservice.azure-api.net/Dev-DSHP-API/\""
+            manifestPlaceholders = [hostName: HOST_NAME_DEV]
+            debuggable false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+    }
+    //For test Coverage
+    testOptions {
+        animationsDisabled = true
+
+        unitTests.returnDefaultValues = true
+        unitTests.includeAndroidResources = true
+        unitTests.all {
+            systemProperty 'robolectric.enabledSdks', '21'
+            setIgnoreFailures(true)
+            jacoco {
+                includeNoLocationClasses = true
+            }
+        }
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+    buildFeatures {
+        dataBinding true
+
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+    packagingOptions {
+        exclude "**/attach_hotspot_windows.dll"
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/AL2.0'
+        exclude 'META-INF/LGPL2.1'
+        exclude("META-INF/*.kotlin_module")
+        exclude "META-INF/licenses/**"
+    }
+}
+
+dependencies {
+    // Android base
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "androidx.core:core-ktx:$ktx_core_ver"
+    implementation "androidx.appcompat:appcompat:$app_compat_ver"
+    implementation "com.google.android.material:material:$material_ver"
+    implementation "androidx.constraintlayout:constraintlayout:$constraint_ver"
+
+
+    //View Model & Live Data
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$livedata_vm_ktx_ver"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$livedata_vm_ktx_ver"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_exten_ver"
+
+    //retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_ver"
+    // GSON
+    implementation "com.squareup.retrofit2:converter-gson:$gson_ver"
+
+    // cropping image library
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
+    //circle imageview dependency
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    //download server image
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+
+    //indicator lib that showing on bottom
+    implementation 'me.relex:circleindicator:2.1.6'
+
+    //auto resizing for recyclerview
+    implementation 'com.google.android:flexbox:2.0.1'
+    annotationProcessor "com.github.bumptech.glide:compiler:4.11.0"
+
+    //navigation component
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.4'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.4'
+
+    //DI Hilt
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+    implementation("com.squareup.okhttp3:okhttp:$okhttp_ver")
+    implementation "com.squareup.okhttp3:logging-interceptor:$ohttp_interceptor_ver"
+
+    //For Hilt support for ViewModel
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_vm_ver"
+    kapt "androidx.hilt:hilt-compiler:$hilt_vm_ver"
+
+    //Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine_main_ver"
+
+    //Room Database
+    implementation "androidx.room:room-runtime:$room_ver"
+    kapt "androidx.room:room-compiler:$room_ver"
+    implementation "androidx.room:room-ktx:$room_ver"
+
+    //Firebase libs
+    implementation platform("com.google.firebase:firebase-bom:$firebase_bom_ver")
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation "com.google.firebase:firebase-messaging:$firebase_message_ver"
+    implementation platform("com.google.firebase:firebase-bom:$firebase_bom_ver")
+    implementation 'com.google.firebase:firebase-messaging-ktx'
+    implementation 'com.google.firebase:firebase-inappmessaging-display-ktx'
+    //implementation "com.google.firebase:firebase-analytics:$firebase_analytics_ver"
+    //implementation "com.google.firebase:firebase-crashlytics:$firebase_crashly_ver"
+
+
+    /**********************Test libs section*******************************************/
+
+    //coroutines Test Implementation
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutine_test_ver"
+    androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutine_test_ver"
+
+    // Local Unit Tests-common
+    implementation "androidx.test:core:$test_core_ver"
+    testImplementation "androidx.arch.core:core-testing:$anroid_core_test_ver"
+    androidTestImplementation "androidx.arch.core:core-testing:$anroid_core_test_ver"
+
+    //Junit
+    testImplementation "junit:junit:$junit_ver"
+    androidTestImplementation "junit:junit:$junit_ver"
+    androidTestImplementation "androidx.test.ext:junit:$junit_ext_test_ver"
+
+    //mockito
+    testImplementation "org.mockito:mockito-core:$mockito_core_ver"
+    testImplementation "com.squareup.okhttp3:mockwebserver:$mock_webserver_ver"
+    testImplementation "org.mockito:mockito-inline:$mockito_inline_ver"
+    androidTestImplementation "org.mockito:mockito-android:$mockito_core_ver"
+    androidTestImplementation "org.mockito:mockito-core:$mockito_core_ver"
+    testImplementation "androidx.arch.core:core-testing:$coreTestingVersion"
+
+
+    //truth Library
+    testImplementation "com.google.truth:truth:$google_truth_ver"
+    androidTestImplementation "com.google.truth:truth:$google_truth_ver"
+
+    //hilt testings
+    androidTestImplementation "com.google.dagger:hilt-android-testing:$hilt_version"
+    kaptAndroidTest "com.google.dagger:hilt-android-compiler:$hilt_version"
+
+    // Fragment test
+    debugImplementation "androidx.fragment:fragment-testing:$fragment_test_ver"
+
+    // Espresso
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_core_ver"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$suppt_espresso_code_v"
+    androidTestImplementation "com.android.support.test:runner:$espresso_runner_ver"
+    androidTestImplementation "com.android.support.test:rules:$espresso_runner_ver"
+    androidTestImplementation "androidx.test:rules:$test_rule_ver"
+    testImplementation "com.android.support.test.espresso:espresso-intents:$espresso_intent_ver"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$espresso_core_ver"
+
+    // androidx.test
+    androidTestImplementation "androidx.test:runner:$androidx_test_ver"
+    androidTestImplementation "androidx.test:core:$androidx_test_ver"
+    androidTestImplementation "androidx.test.uiautomator:uiautomator:$uiautometer_ver"
+
+
+    //Navigation Test
+    androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
+
+    // firebase cloud messaging and In-app Messaging
+    implementation "com.google.firebase:firebase-messaging:$firebase_message_ver"
+    implementation platform("com.google.firebase:firebase-bom:$firebase_bom_ver")
+    implementation 'com.google.firebase:firebase-messaging-ktx'
+    implementation 'com.google.firebase:firebase-inappmessaging-display-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+    /*Google Analytics Tag Manager*/
+    implementation "com.google.firebase:firebase-core:$firebase_core_ver"
+    implementation "com.google.android.gms:play-services-tagmanager:$tag_manager_ver"
+    implementation 'com.google.firebase:firebase-analytics'
+
+    // loader dependency
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+
+}

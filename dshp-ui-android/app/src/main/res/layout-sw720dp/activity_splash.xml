@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?><!--It's layout design for Splash screen for tablet-->
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.photon.medline.epicModules.welcomepage.SplashViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_splash_bg">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/title_medline"
+            android:layout_width="@dimen/_227dp"
+            android:layout_height="@dimen/_83dp"
+            android:layout_marginTop="@dimen/_76dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_skin_health_logo_lg" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_medline"
+            app:srcCompat="@drawable/splash_bg_main" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

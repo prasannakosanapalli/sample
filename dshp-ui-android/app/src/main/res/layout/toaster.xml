@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llToastBAckground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/red"
+    android:gravity="center_vertical"
+    android:minHeight="?actionBarSize"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/_10dp"
+    android:paddingTop="@dimen/_5dp"
+    android:paddingEnd="@dimen/_10dp"
+    android:paddingBottom="@dimen/_5dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/activeStatus"
+        android:layout_width="@dimen/_24dp"
+        android:layout_height="@dimen/_24dp"
+        android:padding="@dimen/_2dp"
+        android:src="@drawable/ic_error" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_active_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10dp"
+        android:layout_marginEnd="@dimen/_10dp"
+        android:fontFamily="@font/opensansbold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15dp" />
+
+</LinearLayout>

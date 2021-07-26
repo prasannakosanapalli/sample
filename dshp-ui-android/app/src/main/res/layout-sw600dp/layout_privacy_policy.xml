@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ic_cancel"
+                android:layout_width="@dimen/_40dp"
+                android:layout_height="@dimen/_40dp"
+                android:layout_marginTop="@dimen/_20dp"
+                android:layout_marginEnd="@dimen/_20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_cross"
+                    android:padding="@dimen/_10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/privacy_policy"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_36dp"
+                android:layout_marginTop="@dimen/_7dp"
+                android:fontFamily="@font/globerextrabold"
+                android:gravity="center"
+                android:text="@string/privacypolicy_termand_condition"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/_20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ic_cancel" />
+
+            <View
+                android:id="@+id/space_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:background="@color/color_dbdbdb"
+                android:elevation="@dimen/_5dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/privacy_policy" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/privacypolicy_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20dp"
+                android:layout_marginTop="@dimen/_15dp"
+                android:layout_marginEnd="@dimen/_20dp"
+                android:text="@string/privacypolicy_text"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/_16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/space_view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/privacy_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15dp"
+                android:fontFamily="@font/opensanssemibold"
+                android:lineSpacingExtra="@dimen/_2dp"
+                android:padding="@dimen/_2dp"
+                android:text="@string/privacy_description"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/_16dp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@+id/privacypolicy_text"
+                app:layout_constraintStart_toStartOf="@+id/privacypolicy_text"
+                app:layout_constraintTop_toBottomOf="@+id/privacypolicy_text" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/table_of_contents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15dp"
+                android:fontFamily="@font/opensansbold"
+                android:text="@string/table_of_contents"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/_16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/privacypolicy_text"
+                app:layout_constraintTop_toBottomOf="@+id/privacy_description" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/grey_circle_1"
+                android:layout_width="@dimen/_7dp"
+                android:layout_height="@dimen/_7dp"
+                android:layout_marginTop="@dimen/_15dp"
+                android:src="@drawable/grey_circle"
+                app:layout_constraintStart_toStartOf="@+id/privacypolicy_text"
+                app:layout_constraintTop_toBottomOf="@+id/table_of_contents" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/introduction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15dp"
+                android:layout_marginTop="@dimen/_7dp"
+                android:fontFamily="@font/opensansregular"
+                android:paddingEnd="@dimen/_10dp"
+                android:text="@string/introduction"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/_16dp"
+                app:layout_constraintStart_toStartOf="@+id/grey_circle_1"
+                app:layout_constraintTop_toBottomOf="@+id/table_of_contents" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/grey_circle_2"
+                android:layout_width="@dimen/_7dp"
+                android:layout_height="@dimen/_7dp"
+                android:layout_marginTop="@dimen/_17dp"
+                android:src="@drawable/grey_circle"
+                app:layout_constraintStart_toStartOf="@+id/privacypolicy_text"
+                app:layout_constraintTop_toBottomOf="@+id/grey_circle_1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/personaldata"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:fontFamily="@font/opensansregular"
+                android:paddingEnd="@dimen/_10dp"
+                android:text="@string/personaldata"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/_16dp"
+                app:layout_constraintStart_toStartOf="@+id/grey_circle_2"
+                app:layout_constraintTop_toBottomOf="@+id/grey_circle_1" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/grey_circle_3"
+                android:layout_width="@dimen/_7dp"
+                android:layout_height="@dimen/_7dp"
+                android:layout_marginTop="@dimen/_17dp"
+                android:src="@drawable/grey_circle"
+                app:layout_constraintStart_toStartOf="@+id/privacypolicy_text"
+                app:layout_constraintTop_toBottomOf="@+id/grey_circle_2" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/collect_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:fontFamily="@font/opensansregular"
+                android:paddingEnd="@dimen/_10dp"
+                android:text="@string/collect_data"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/_16dp"
+                app:layout_constraintStart_toStartOf="@+id/grey_circle_2"
+                app:layout_constraintTop_toBottomOf="@+id/grey_circle_2" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/grey_circle_4"
+                android:layout_width="@dimen/_7dp"
+                android:layout_height="@dimen/_7dp"
+                android:layout_marginTop="@dimen/_17dp"
+                android:src="@drawable/grey_circle"
+                app:layout_constraintStart_toStartOf="@+id/privacypolicy_text"
+                app:layout_constraintTop_toBottomOf="@+id/grey_circle_3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/your_personal_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:fontFamily="@font/opensansregular"
+                android:paddingEnd="@dimen/_10dp"
+                android:text="@string/your_personal_data"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/_16dp"
+                app:layout_constraintStart_toStartOf="@+id/grey_circle_3"
+                app:layout_constraintTop_toBottomOf="@+id/grey_circle_3" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_20dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:elevation="@dimen/_5dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/grey_circle_4" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

@@ -1,0 +1,6 @@
+projectKey=gradle
+serverUrl=http://localhost:9004
+serverVersion=8.9.0.43852
+dashboardUrl=http://localhost:9004/dashboard?id=gradle
+ceTaskId=AXod-tAN4t-6ZKIHBG0U
+ceTaskUrl=http://localhost:9004/api/ce/task?id=AXod-tAN4t-6ZKIHBG0U

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:title="@string/title_home" />
+    <item
+        android:id="@+id/navigation_formulary"
+        android:title="@string/title_formulary" />
+    <item
+        android:id="@+id/navigation_findcare"
+        android:title="@string/title_findcare" />
+    <item
+        android:id="@+id/navigation_feedback"
+        android:title="@string/title_feedback" />
+    <item
+        android:id="@+id/navigation_hotline"
+        android:title="@string/title_hotline" />
+</menu>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.photon.medline.epicModules.dashboard.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_formulary"
+        android:name="com.photon.medline.epicModules.dashboard.formulary.FormularyFragment"
+        android:label="@string/title_formulary"
+        tools:layout="@layout/fragment_formulary" />
+
+    <fragment
+        android:id="@+id/navigation_findcare"
+        android:name="com.photon.medline.epicModules.dashboard.findcare.FindCareFragment"
+        android:label="@string/title_findcare"
+        tools:layout="@layout/fragment_findcare" />
+
+    <fragment
+        android:id="@+id/navigation_feedback"
+        android:name="com.photon.medline.epicModules.dashboard.feedback.FeedbackFragment"
+        android:label="@string/title_feedback"
+        tools:layout="@layout/fragment_feedback" />
+    <fragment
+        android:id="@+id/navigation_hotline"
+        android:name="com.photon.medline.epicModules.dashboard.hotline.HotlineFragment"
+        android:label="@string/title_hotline"
+        tools:layout="@layout/fragment_hotline" />
+</navigation>

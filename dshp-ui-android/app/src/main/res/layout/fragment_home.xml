@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.photon.medline.epicModules.dashboard.home.HomeViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/dashboard_nested_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_home_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lightBlue">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide_line_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/_22dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide_line_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/_22dp" />
+
+            <com.photon.medline.epicModules.dashboard.home.widget.SearchWidget
+                android:id="@+id/wdt_search"
+                style="@style/wdt_search"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_47dp"
+                android:layout_marginTop="@dimen/_25dp"
+                app:layout_constraintEnd_toEndOf="@id/guide_line_right"
+                app:layout_constraintStart_toStartOf="@id/guide_line_left"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_greeting"
+                style="@style/dashboardGreetingText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/wdt_search" />
+
+
+            <View
+                android:id="@+id/view_product_center"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1dp"
+                app:layout_constraintBottom_toBottomOf="@id/rv_product"
+                app:layout_constraintTop_toTopOf="@id/rv_product" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_with_top_left_corner_radius_20"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_product_center" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/_20dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="@id/guide_line_right"
+                app:layout_constraintStart_toStartOf="@id/guide_line_left"
+                app:layout_constraintTop_toBottomOf="@id/txt_greeting"
+                bind:listitem="@layout/item_product"
+                bind:productList="@{viewModel.productListModel}"
+                bind:viewModel="@{viewModel}" />
+
+            <com.photon.medline.epicModules.dashboard.home.widget.BannerWidget
+                android:id="@+id/wdt_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_product" />
+
+            <com.photon.medline.epicModules.dashboard.home.widget.CategoryWidget
+                android:id="@+id/wdt_sub_category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/wdt_banner" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?><!--It's layout design for Login screen for tablets-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="loginviewModel"
+            type="com.photon.medline.epicModules.authentication.login.loginwithEmailPass.vm.view.ui.LoginViewModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        bind:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            bind:ignore="MissingConstraints">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_65dp"
+                android:layout_marginStart="@dimen/_46dp"
+                android:layout_marginTop="@dimen/_76dp"
+                android:layout_marginEnd="@dimen/_46dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_181dp"
+                        android:layout_height="@dimen/_64dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_header_logo_sm" />
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_179dp"
+                android:layout_marginTop="@dimen/_70dp"
+                android:layout_marginEnd="@dimen/_179dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_login_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/globerbold"
+                    android:gravity="center_horizontal"
+                    android:text="@string/welcome"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/_37sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_login_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/opensansregular"
+                    android:gravity="center_horizontal"
+                    android:text="@string/continue_message"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_login_title" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_69dp"
+                    android:layout_marginStart="@dimen/_21dp"
+                    android:layout_marginTop="@dimen/_41dp"
+                    android:layout_marginEnd="@dimen/_21dp"
+                    android:background="@{loginviewModel.loginEmail?@drawable/red_corner_rectangle:@drawable/corner_ractangle}"
+                    android:fontFamily="@font/opensansregular"
+                    android:hint="@string/hint_email"
+                    android:maxLines="1"
+                    android:nextFocusDown="@+id/edt_login_password"
+                    android:onTextChanged="@{loginviewModel::onLoginEmailTextChangeListener}"
+                    android:paddingLeft="@dimen/_12dp"
+                    android:singleLine="true"
+                    android:text="@={loginviewModel.loginModel.email}"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/gray"
+                    android:textSize="@dimen/_20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_login_text" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/username_error"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_21dp"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:layout_marginEnd="@dimen/_21dp"
+                    android:fontFamily="@font/opensansregular"
+                    android:paddingLeft="@dimen/_1dp"
+                    android:text="@string/email_error"
+                    android:textColor="@color/error_text"
+                    android:textSize="@dimen/_17sp"
+                    android:visibility="@{loginviewModel.loginEmail?View.VISIBLE:View.GONE}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_user_name" />
+
+                <FrameLayout
+                    android:id="@+id/framelayout_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_21dp"
+                    android:layout_marginTop="@dimen/_18dp"
+                    android:layout_marginEnd="@dimen/_21dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/username_error">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edt_login_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_69dp"
+                        android:background="@{loginviewModel.loginPassword?@drawable/red_corner_rectangle:@drawable/corner_ractangle}"
+                        android:fontFamily="@font/opensansregular"
+                        android:hint="@string/hint_pwd"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:onTextChanged="@{loginviewModel::onLoginPasswordTextChangeListener}"
+                        android:paddingStart="@dimen/_12dp"
+                        android:paddingEnd="@dimen/_12dp"
+                        android:singleLine="true"
+                        android:text="@={loginviewModel.loginModel.password}"
+                        android:textColor="@color/color_333333"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/_20sp"
+                        bind:hideShowText="@{loginviewModel.hideShowTogglePassword}" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_69dp"
+                        android:layout_gravity="end"
+                        android:onClick="@{()->loginviewModel.hideShowPasswordClick()}"
+                        android:paddingEnd="@dimen/_12dp"
+                        android:visibility="@{loginviewModel.passwordVisibility?View.VISIBLE:View.GONE}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        bind:srcCompat="@{loginviewModel.hideShowTogglePassword?@drawable/toggle_password_eye_dark:@drawable/toggle_password_eye}" />
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/login_password_error"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_21dp"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:layout_marginEnd="@dimen/_21dp"
+                    android:fontFamily="@font/opensansregular"
+                    android:paddingLeft="@dimen/_1dp"
+                    android:text="@string/pwd_error"
+                    android:textColor="@color/error_text"
+                    android:textSize="@dimen/_17sp"
+                    android:visibility="@{loginviewModel.loginPassword?View.VISIBLE:View.GONE}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/framelayout_password" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_78dp"
+                    android:layout_marginStart="@dimen/_21dp"
+                    android:layout_marginTop="@dimen/_61dp"
+                    android:layout_marginEnd="@dimen/_21dp"
+                    android:background="@drawable/blue_corner_ractangle"
+                    android:enabled="@{loginviewModel.enableDisableLoginButton}"
+                    android:fontFamily="@font/opensanssemibold"
+                    android:onClick="@{()-> loginviewModel.onLoginButtonClick()}"
+                    android:text="@string/login_title"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_23sp"
+                    app:layout_constraintTop_toBottomOf="@+id/login_password_error" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_login_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_78dp"
+                    android:layout_marginStart="@dimen/_21dp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_marginEnd="@dimen/_21dp"
+                    android:background="@drawable/black_corner_ractangle"
+                    android:fontFamily="@font/opensanssemibold"
+                    android:onClick="@{()->loginviewModel.onClickRegister()}"
+                    android:text="@string/register"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/_23sp"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_forgot_Password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_21dp"
+                    android:layout_marginTop="@dimen/_35dp"
+                    android:layout_marginEnd="@dimen/_21dp"
+                    android:fontFamily="@font/opensanssemibold"
+                    android:gravity="center_vertical|center"
+                    android:onClick="@{()->loginviewModel.onForgotPasswordButtonClick()}"
+                    android:text="@string/forget_password_button"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/_17sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_login_register" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>
